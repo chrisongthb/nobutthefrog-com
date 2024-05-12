@@ -1,8 +1,8 @@
 ---
 layout: sub-page
+title: Termine
 ---
 
-      <h1>Termine</h1>
       <div id="songkick-widget-container">
         <a href="https://www.songkick.com/artists/9802904" class="songkick-widget" data-theme="light" data-track-button="on"
           data-detect-style="on" data-background-color="rgb(0,0,0,0)" data-font-color="rgb(0,0,0,1)"

@@ -1,8 +1,8 @@
 ---
 layout: sub-page
+title: Kontakt
 ---
 
-      <h1>Kontakt</h1>
       <p>TODO: content</p>
       <div id="main-content-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
         <a id="main-content-button-link" target="_blank" href="mailto:contact@nobutthefrog.com">

@@ -42,8 +42,13 @@
   <div id="content-flex-container">
     <main class="content-flex-item" id="main-content-box">
 
+      {%- if page.title -%}
+        <h1>{{ page.title }}</h1>
+      {%- endif -%}
       {{ page.content }}
-      {%- include {{ page.extra_include }} -%}
+      {%- if page.extra_include -%}
+        {%- include {{ page.extra_include }} -%}
+      {%- endif -%}
 
     </main>
     <div class="content-flex-item" id="support-box">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}">
 
 <head>
   <meta charset="utf-8">
@@ -22,14 +22,21 @@
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
     <a href="{{ site.baseurl }}/" class="active">Home</a>
-    <a href="{{ site.baseurl }}/aktuelles">Aktuelles</a>
-    <a href="{{ site.baseurl }}/newsletter">Newsletter</a>
-    <a href="{{ site.baseurl }}/musik">Musik</a>
-    <a href="{{ site.baseurl }}/termine">Termine</a>
-    <a href="{{ site.baseurl }}/shop">Shop</a>
-    <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
-    <a href="{{ site.baseurl }}/en">
-      <div id="language-selector-container"><img id="language-selector" src="{{ site.baseurl }}/assets/img/gb.svg" /></div>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}aktuelles{% else %}en/blog{% endif %}">{% if page.lang ==
+      "de" %}Aktuelles{% else %}Blog{% endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}">{% if page.lang
+      == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{% else %}en/music{% endif %}">{% if page.lang == "de"
+      %}Musik{% else %}Music{% endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}termine{% else %}en/dates{% endif %}">{% if page.lang == "de"
+      %}Termine{% else %}Dates{% endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}shop{% else %}en/shop{% endif %}">{% if page.lang == "de"
+      %}Shop{% else %}Shop{% endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}kontakt{% else %}en/contact{% endif %}">{% if page.lang ==
+      "de" %}Kontakt{% else %}Contact{% endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}en/{% else %}{% endif %}">
+      <div id="language-selector-container"><img id="language-selector"
+          src="{{ site.baseurl }}/assets/img/{% if page.lang == "de" %}gb.svg{% else %}de.svg{% endif %}" /></div>
     </a> <!-- TODO: jekyll: add current path to href, sodass man auf der gleichen Seite wieder landet -->
     <a href="javascript:void(0);" id="menu-icon">
       <div id="menu-icon-bars-container">
@@ -44,6 +51,7 @@
   <div id="content-flex-container">
     <main class="content-flex-item" id="main-content-box">
       <h1>Don't Stop Loving The World</h1>
+      {% if page.lang == "de" %}
       <p>Nobutthefrog machen zauberhaften Indie-Folk, der ihr Publikum daran erinnert, welche Schönheit in der Welt
         verborgen liegt. Das Zusammenspiel zwischen Geige, Gitarre und zweistimmigem Gesang öffnet einen Raum für
         Verbundenheit, Frieden und ein Gespür für das, was wirklich zählt.</p>
@@ -52,6 +60,15 @@
       <p>Ihre Lieder bringen dich ins Hier und Jetzt, setzen Impulse für all das Neue, das für dich bereit liegt.
         Nobutthefrog ermutigen durch ihre Songs: Du hast dein Leben selbst in der Hand, also fang an, es entsprechend zu
         gestalten!</p>
+      {% else %}
+      <p>Nobutthefrog play enchanting indie folk that reminds their audience of the beauty that lies hidden in the
+        world. The harmonies between violin, guitar and two-part vocals open up a space for connection, peace and a
+        sense of what really matters.</p>
+      <p> The duo is always drawn out into the world to find happiness and inspiration for life in nature and by the
+        sea. Their songs take you into the here and now, setting impulses for all the new things that are waiting for
+        you. Nobutthefrog encourage you through their songs: You are in control of your life, so start creating it!</p>
+      {% endif %}
+
     </main>
     <div class="content-flex-item" id="support-box">
       <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
@@ -97,4 +114,5 @@
     </div>
   </div>
 </body>
+
 </html>

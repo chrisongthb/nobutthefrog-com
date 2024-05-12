@@ -1,14 +1,12 @@
 ---
-layout: post
-title:  "Made with Github App!"
-date:   2024-02-08 12:00:00 +0100
+layout: sub-page
+title:  "Unsere neue Website ist NICHT online!"
+date:   2024-05-12 12:00:00 +0100
 categories: blog
 ---
-Nothing better than sitting in the sun and blogging 😎
+Na da schau mal einer an - lange hat sich nix getan und jetzt ist es doch nicht so weit. Aber lest selbst.
 
-Made wirh github mobile app. 
-
-Jekyll also offers powerful support for code snippets:
+Erster Blogpost hier und da. 
 
 {% highlight ruby %}
 def print_hi(name)

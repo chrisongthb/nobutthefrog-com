@@ -1,6 +1,7 @@
 ---
 layout: sub-page
-extra_include: posts.html
+extra_include: postslist.html
+title: Aktuelles
 ---
 
-      <h1>Aktuelles</h1>
+      <p>TODO: Einleitungstext: Hier findest du alle Blogposts, blablub</p>

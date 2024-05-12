@@ -1,10 +1,9 @@
 ---
 layout: sub-page
+title: Impressum
 ---
 
 TODO evtl. aufsplitten
-
-<h2>Impressum</h2>
 
 <p>Von Datenschutz.org, letzte Aktualisierung am: 27. Februar 2024</p>
 
