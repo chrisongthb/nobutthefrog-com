@@ -1,14 +1,12 @@
 ---
-layout: base
+layout: sub-page
 ---
 
 TODO evtl. aufsplitten
 
 <h2>Impressum</h2>
 
-Impressum
-
-Von Datenschutz.org, letzte Aktualisierung am: 27. Februar 2024
+<p>Von Datenschutz.org, letzte Aktualisierung am: 27. Februar 2024</p>
 
 Twitter Facebook Pinterest
 Angaben gemäß § 5 TMG:

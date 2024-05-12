@@ -1,0 +1,465 @@
+
+/* First of all, you have a @font-face ruleset at the start of the CSS, which specifies the font file(s) to download: */
+@font-face {
+  font-family: "Quicksand";
+  src: url("../font/Quicksand-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Quicksand Bold";
+  src: url("../font/Quicksand-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("../font/Cantarell-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cantarell Bold";
+  src: url("../font/Cantarell-Bold.ttf") format("truetype");
+}
+
+body {
+  display: grid; /* default is display: block, which implies margins between all divs*/
+  margin: 0; /* default is 8 (?!) */
+  font-family: "Quicksand", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: lightgoldenrodyellow;
+}
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+  object-position: 100% 20%;
+}
+
+.logo {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  max-width: 35vw;
+  min-width: 35vw;
+  user-select: none;
+}
+
+/* https://codepen.io/postor/pen/vYpNYg */
+#arrows {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 60px;
+  height: 100px;
+  margin-left: -30px;
+}
+
+#arrows.hidden {
+  display: none;
+}
+
+#arrows path {
+  stroke: #333;
+  fill: transparent;
+  stroke-width: 4px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+#arrows path.a1 {
+  animation-delay:-1s;
+}
+
+#arrows path.a2 {
+  animation-delay:-0.5s;
+}
+
+#arrows path.a3 {
+  animation-delay:0s;
+}
+
+.topnav {
+  display: flex;
+  width: 100%;
+  font-family: "Cantarell";
+  font-size: 1.3rem;
+  flex-direction: row;
+  margin-block: 1rem;
+}
+
+.topnav a {
+  background-color: #33333333;
+  display: block;
+  color: black;
+  text-align: center;
+  padding-block: 0.6rem;
+  margin-inline: 0.6rem;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+.topnav a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #DC9489;
+  color: white;
+}
+
+.topnav #menu-icon {
+  display: none;
+}
+
+#language-selector-container {
+  width: 100%;
+}
+
+#language-selector {
+  height: 1em;
+}
+
+#menu-icon-bars-container {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#menu-icon-bars-container div {
+  width: 32px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.4s;
+}
+
+.menu-icon-bar-1 {
+  margin-bottom: 4px;
+}
+
+.menu-icon-bar-2 {
+  margin-bottom: 4px;
+}
+
+#menu-icon-bars-container.showitems .menu-icon-bar-1 {
+  transform: translate(0, 7px) rotate(-45deg);
+}
+
+#menu-icon-bars-container.showitems .menu-icon-bar-2 {
+  opacity: 0;
+}
+
+#menu-icon-bars-container.showitems .menu-icon-bar-3 {
+  transform: translate(0, -7px) rotate(45deg);
+}
+
+
+/* https://www.w3schools.com/css/css3_flexbox_responsive.asp */
+#content-flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#main-content-box {
+  font-size: 1.0rem;
+  padding-inline: 5vw;
+  margin-inline: 5vw;
+  margin-block: 7vh;
+  padding-block: 2vh;
+  border-radius: 0.3rem;
+  box-shadow: inset #33333311 0px 0px 1em 0.1em;
+  flex-basis: 70vw;
+}
+
+#main-content-box p {
+  hyphens: auto;
+  text-align: justify;
+}
+
+#support-box-button-container {
+  height: 100%;
+}
+
+#support-box {
+  position: relative; /* see also #support-text position absolute */
+  flex-basis: 30vw;
+  text-align: center;
+  margin-right: 5vw;
+  margin-top: 7vh;
+  max-height: 300px;
+}
+
+#support-text {
+  /* position */
+  position: absolute; /* see also parent div: (relative)*/
+  left: 50%;
+  margin-top: 2em;
+  transform: translate(-50%, 0%);
+
+  /* style */
+  font-family: "Quicksand Bold";
+  color: black;
+  background-color: #DCCD8990;
+  padding: 0.3em;
+  font-size: 1.1rem;
+  user-select: none;
+  border-radius: 0.3rem;
+}
+
+#support-image {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+/*
+  Trigger image shadow on hover of the a element
+  https://stackoverflow.com/a/4502693
+*/
+#support-link:hover > #support-image{
+  box-shadow: 0px 0px 1em 0.1em #566313;
+}
+
+#video-box {
+  width: 100%;
+  height: 115vh;
+  background-color: #000000;
+  text-align: center;
+  transition: 900ms; /* TODO: fade out on tag deletion */
+}
+
+#yt-video {
+  width: 90%;
+  height: 80vh;
+  padding-top: 25vh; /* height plus padding-top results in center */
+  display: inline-block; /* important for centering and max-height: 100% */
+}
+
+#showVideoContainer {
+  height: 100%; /* inherit height from parent */
+}
+
+#showVideoImage {
+  min-height: 100%;
+  max-height: 100%;
+  transition: 200ms;
+  border-radius: 0.3rem;
+}
+
+/*
+  TODO: maybe use filter: blur(0.1em) sepia(0.2);
+  Problem here is, that the Text then is no longer visible
+*/
+#showVideoImage:hover {
+  box-shadow: 0px 0px 1em 10px #566313;
+  cursor: pointer;
+}
+
+#showVideoText {
+  /* position */
+  position: absolute; /* see also parent div: (relative)*/
+  left: 50%;
+  margin-top: 10vh; /* #yt-video has 10% frame */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  /* style */
+  font-family: "Quicksand Bold";
+  color: #2E2E2E;
+  font-size: larger; /* passt nicht bei 32:9 */
+  user-select: none;
+  cursor: pointer;
+}
+
+/*
+  Leave box shadow, if text is hovered
+  https://stackoverflow.com/a/4502693
+*/
+#showVideoText:hover + #showVideoImage {
+  box-shadow: 0px 0px 1em 10px #566313;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-block: 3vh
+}
+
+#footer-icon-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* this is all children of that div of type a */
+#footer-icon-flex-container a {
+  border-radius: 0.3rem;
+  transition: 200ms;
+  font-size: 1.3em;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 0.5em 0.7em;
+  text-decoration: none;
+}
+#footer-icon-flex-container a:hover {
+  background-color: #333;
+  color: white;
+}
+
+#footer-links-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* this is all children*/
+#footer-links-flex-container * {
+  padding: 0.5em;
+  color: black;
+  text-decoration: none;
+}
+
+#footer-copyright-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* this is all children*/
+#footer-copyright-flex-container * {
+  padding: 0.5em;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+  #arrows {
+    display: none;
+  }
+
+  .logo {
+    position: initial; /* TODO: funktioniert - was heißt das? */
+    max-width: 60%;
+    min-width: 60%;
+    transform: translate(25%, 0%); /* center it - see also margins below */
+    margin-top: 5vh;
+    margin-inline: 5vw;
+  }
+
+  .cover {
+    /* make it a TODO: Quadrat */
+    width: 90%; /* see also margins */
+    height: 90vw; /* see also margins */
+    object-position: top;
+    object-position: 80% 0%;
+    margin-inline: 5vw;
+    margin-top: 5vh;
+    border-radius: 0.3rem;
+  }
+
+  .topnav {
+    margin-inline: 5vw;
+    margin-top: 5vh;
+    font-size: 1.3em;
+    width: 90%;
+    user-select: none
+  }
+
+  .topnav a {
+    width: 80%;
+    margin-inline: initial;
+  }
+
+  .topnav a:hover {
+    background-color: #33333333;
+    color: black;
+  }
+
+  .topnav a.active:hover {
+    background-color: #DC9489;
+    color: white;
+  }
+
+
+  .topnav a:not(.active) {
+    display: none;
+  }
+  .topnav a#menu-icon {
+    float: right;
+    display: block;
+    width: 20%;
+  }
+
+
+  .topnav.showitems {
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .topnav a.active {
+    order: -2 /* default order is 0, which lets other elements sort to the end */
+  }
+  .topnav #menu-icon {
+    width: 20%; /* default order is 0, which lets other elements sort to the end */
+    order: -1;
+  }
+  .topnav.showitems a {
+    display: grid;
+    margin-bottom: 0.1em;
+  }
+
+  #content-flex-container {
+    flex-direction: column;
+  }
+
+  #support-box {
+    text-align: center;
+    padding: 0px;
+    margin-inline: 5vw;
+    margin-top: 5vh;
+    width: 90%;
+  }
+
+  #support-text {
+    font-size: 1.2em;
+  }
+
+  #main-content-box {
+    margin-block: initial;
+    margin-inline: 5vw;
+    margin-top: 5vh;
+  }
+
+  #video-box {
+    margin-top: 5vh;
+  }
+
+  #showVideoImage {
+    object-fit: cover;
+    object-position: top;
+    object-position: 60% 0%;
+
+    max-width: 86%;
+    min-width: 60%;
+    transform: translate(0%, 0%); /* center it - see also margins below */
+
+    min-height: 60vh;
+    max-height: 60vh;
+
+  }
+}

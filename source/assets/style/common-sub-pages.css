@@ -1,0 +1,120 @@
+.header_logo {
+  position: absolute;
+  height: 8vh;
+  margin-block: 2vh;
+  padding-inline: 2vw;
+}
+
+.header_cover {
+  width: 100%;
+  height: calc(10vh + 1.0rem); /* is header_logo + padding + font size of menu */
+  object-fit: cover;
+  object-position: top;
+  object-position: 0% 0%;
+}
+
+/* see also data-detect-style="on" property of .songkick-widget */
+#songkick-widget-container {
+  font-family: "Quicksand Bold", "Cantarell Bold"
+}
+
+.topnav {
+  position: absolute;
+  font-size: 1.1rem;
+  width: auto;
+  right: 0px;
+  top: 0px;
+  /* for blurring the background, when .showitems*/
+  padding-inline: 2vw;
+  padding-top: 3vh;
+  padding-bottom: 100vh;
+  margin-right: initial;
+  margin-top: initial;
+}
+
+.topnav a {
+  padding-inline: 0.7em;
+  margin-inline: 0.1rem;
+  padding-block: 0.5rem;
+}
+
+.topnav a#menu-icon {
+  width: 20vw;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+   scroll-and-then fixed
+   no javascript and extra class names needed here :)
+*/
+#support-box {
+  position: sticky;
+  top: 7vh; /* has to match margin-block of #main-content-box in main.css*/
+}
+
+/*
+  The descend into #main-content-button-link is needed
+  Just putting #main-content-button-text here does not work...
+*/
+#main-content-button-link #main-content-button-text {
+  width: 100%;
+  text-align: center;
+}
+
+#main-content-button-container {
+  box-sizing: border-box;
+  text-align: center;
+  margin-block: 4em;
+  margin-inline: 4em;
+  border-radius: 0.3rem;
+}
+
+#main-content-button-container:hover {
+  box-shadow: 0px 0px 1em 0.1em #566313;
+}
+
+#main-content-button-link {
+  color: brown;
+  text-decoration: none;
+}
+#main-content-button-text {
+  font-family: "Quicksand Bold";
+  color: black;
+  background-color: #DCCD8990;
+  padding-block: 1.4em;
+  font-size: 1em;
+  user-select: none;
+  border-radius: 0.3rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .topnav.showitems {
+    position: absolute;
+    width: calc(100% - 2vw - 2vw);
+    backdrop-filter: blur(0.9em);
+    -webkit-backdrop-filter: blur(0.9em);
+    border-radius: 0.3rem;
+    z-index: 100;
+  }
+
+  .topnav.showitems a {
+    width: 60vw;
+    margin-left: auto;
+    margin-right: 20vw;
+  }
+
+  .topnav.showitems a.active {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  #main-content-button-container {
+    margin-inline: 2em;
+    padding-inline: 2em;
+  }
+}

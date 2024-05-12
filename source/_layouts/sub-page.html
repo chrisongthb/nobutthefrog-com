@@ -6,24 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, viewport-fit=cover">
   <link rel="stylesheet" href="/assets/style/main.css">
+  <link rel="stylesheet" href="/assets/style/common-sub-pages.css">
   <link rel="stylesheet" href="/assets/style/socicon.min.css">
-  <script type="text/javascript" src="/assets/script/home.js"></script>
+  <script type="text/javascript" src="/assets/script/common-sub-pages.js"></script>
 </head>
 
 <body>
-  <a href="#arrows"><img class="logo" src="/assets/img/logo.webp" /></a>
-  <a href="#arrows"><img class="cover" src="/assets/img/cover.webp" /></a>
-  <svg id="arrows"> <!-- https://codepen.io/postor/pen/vYpNYg -->
-    <path class="a1" d="M0 0 L30 32 L60 0"></path>
-    <path class="a2" d="M0 20 L30 52 L60 20"></path>
-    <path class="a3" d="M0 40 L30 72 L60 40"></path>
-  </svg>
+  <div class="header">
+    <a href="/" ><img class="header_logo" src="/assets/img/logo.webp" /></a>
+    <img class="header_cover" src="/assets/img/cover.webp" />
+  </div>
 
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
-    <a href="/" class="active">Home</a>
+    <a href="/">Home</a>
     <a href="/aktuelles">Aktuelles</a>
-    <a href="/newsletter">Newsletter</a>
+    <a href="/newsletter" class="active">Newsletter</a>
     <a href="/musik">Musik</a>
     <a href="/termine">Termine</a>
     <a href="/shop">Shop</a>
@@ -40,18 +38,12 @@
     </a>
   </div>
 
-
+  <!-- content -->
   <div id="content-flex-container">
     <main class="content-flex-item" id="main-content-box">
-      <h1>Don't Stop Loving The World</h1>
-      <p>Nobutthefrog machen zauberhaften Indie-Folk, der ihr Publikum daran erinnert, welche Schönheit in der Welt
-        verborgen liegt. Das Zusammenspiel zwischen Geige, Gitarre und zweistimmigem Gesang öffnet einen Raum für
-        Verbundenheit, Frieden und ein Gespür für das, was wirklich zählt.</p>
-      <p>Das Duo zieht es immer wieder raus in die Welt, um in der Natur und am Meer Glück und Inspiration fürs Leben zu
-        finden.</p>
-      <p>Ihre Lieder bringen dich ins Hier und Jetzt, setzen Impulse für all das Neue, das für dich bereit liegt.
-        Nobutthefrog ermutigen durch ihre Songs: Du hast dein Leben selbst in der Hand, also fang an, es entsprechend zu
-        gestalten!</p>
+
+      {{ page.content }}
+
     </main>
     <div class="content-flex-item" id="support-box">
       <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
@@ -59,17 +51,6 @@
           <p id="support-text">Unterstütze unsere künstlerische Arbeit</p>
           <img id="support-image" src="/assets/img/support_background.webp" />
         </a>
-      </div>
-    </div>
-  </div>
-  <div id="video-box">
-    <!-- The youtube iframe JS will replace this <div> tag. -->
-    <!-- example: <iframe id="yt-video" src="https://www.youtube-nocookie.com/embed/MeTZ5XEZIZk?si=7AuIRfw0JbkZNcV-&origin=http://nobutthefrog.com" title="Nobutthefrog - Don't Stop Loving The World | Official Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-    <div id="yt-video">
-      <div id="showVideoContainer">
-        <p id="showVideoText">&#xBB; Don't Stop Loving The World | Official Video &#xAB;<br>&#x2014;<br><span
-            class="socicon-youtube"></span> YouTube</p>
-        <img id="showVideoImage" src="/assets/img/Feld-Session.webp" />
       </div>
     </div>
   </div>
@@ -88,14 +69,13 @@
           class="socicon-youtube"></span></a>
     </div>
     <div id="footer-links-flex-container">
-      <a href="impressum">Impressum</a>
-      <a href="datenschutz">Datenschutz</a>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
       <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Presskit for Venues</a>
     </div>
     <div id="footer-copyright-flex-container">
       <span>© 2034 Gandalf</span>
     </div>
-  </div>
 </body>
 
 </html>
