@@ -5,29 +5,29 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, viewport-fit=cover">
-  <link rel="stylesheet" href="/assets/style/main.css">
-  <link rel="stylesheet" href="/assets/style/common-sub-pages.css">
-  <link rel="stylesheet" href="/assets/style/socicon.min.css">
-  <script type="text/javascript" src="/assets/script/common-sub-pages.js"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style/common-sub-pages.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style/socicon.min.css">
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/script/common-sub-pages.js"></script>
 </head>
 
 <body>
   <div class="header">
-    <a href="/" ><img class="header_logo" src="/assets/img/logo.webp" /></a>
-    <img class="header_cover" src="/assets/img/cover.webp" />
+    <a href="{{ site.baseurl }}/" ><img class="header_logo" src="{{ site.baseurl }}/assets/img/logo.webp" /></a>
+    <img class="header_cover" src="{{ site.baseurl }}/assets/img/cover.webp" />
   </div>
 
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
-    <a href="/">Home</a>
-    <a href="/aktuelles">Aktuelles</a>
-    <a href="/newsletter" class="active">Newsletter</a>
-    <a href="/musik">Musik</a>
-    <a href="/termine">Termine</a>
-    <a href="/shop">Shop</a>
-    <a href="/kontakt">Kontakt</a>
-    <a href="/en">
-      <div id="language-selector-container"><img id="language-selector" src="/assets/img/gb.svg" /></div>
+    <a href="{{ site.baseurl }}/">Home</a>
+    <a href="{{ site.baseurl }}/aktuelles">Aktuelles</a>
+    <a href="{{ site.baseurl }}/newsletter" class="active">Newsletter</a>
+    <a href="{{ site.baseurl }}/musik">Musik</a>
+    <a href="{{ site.baseurl }}/termine">Termine</a>
+    <a href="{{ site.baseurl }}/shop">Shop</a>
+    <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
+    <a href="{{ site.baseurl }}/en">
+      <div id="language-selector-container"><img id="language-selector" src="{{ site.baseurl }}/assets/img/gb.svg" /></div>
     </a> <!-- TODO: jekyll: add current path to href, sodass man auf der gleichen Seite wieder landet -->
     <a href="javascript:void(0);" id="menu-icon">
       <div id="menu-icon-bars-container">
@@ -47,9 +47,9 @@
     </main>
     <div class="content-flex-item" id="support-box">
       <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
-        <a id="support-link" href="support">
+        <a id="support-link" href="{{ site.baseurl }}/support">
           <p id="support-text">Unterstütze unsere künstlerische Arbeit</p>
-          <img id="support-image" src="/assets/img/support_background.webp" />
+          <img id="support-image" src="{{ site.baseurl }}/assets/img/support_background.webp" />
         </a>
       </div>
     </div>
@@ -69,8 +69,8 @@
           class="socicon-youtube"></span></a>
     </div>
     <div id="footer-links-flex-container">
-      <a href="#">Impressum</a>
-      <a href="#">Datenschutz</a>
+      <a href="{{ site.baseurl }}/impressum">Impressum</a>
+      <a href="{{ site.baseurl }}/datenschutz">Datenschutz</a>
       <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Presskit for Venues</a>
     </div>
     <div id="footer-copyright-flex-container">
