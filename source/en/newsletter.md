@@ -1,13 +1,14 @@
 ---
 layout: sub-page
 title: Newsletter
+lang: en
 ---
 
       <p>TODO: content</p>
-      <p>Bleibe immer auf dem Laufenden</p>
-      <p>Hier erfährst du von unserem Leben als selbstständige Musiker, von unseren Tourplänen, von unseren Reiseeindrücken und von Themen, die uns so beschäftigen.</p>
+      <p>Stay on the running</p>
+      <p>Here you dive into our live as selfstanding musician. Ciao
       <div id="main-content-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
         <a id="main-content-button-link" target="_blank" href="http://eepurl.com/isboko">
-          <p id="main-content-button-text">Abboniere unseren Newsletter</p>
+          <p id="main-content-button-text">Checkout our Newsletter</p>
         </a>
       </div>
