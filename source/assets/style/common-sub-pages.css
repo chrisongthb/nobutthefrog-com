@@ -7,7 +7,7 @@
 
 .header_cover {
   width: 100%;
-  height: calc(10vh + 1.0rem); /* is header_logo + padding of header_logo + font size of menu */
+  height: calc(8vh + 4vh + 1.0rem); /* is header_logo + padding of header_logo + font size of menu */
   object-fit: cover;
   object-position: top;
   object-position: 0% 0%;
@@ -123,5 +123,11 @@
 @media screen and (max-height: 500px) {
   .header_cover {
     height: calc(8vh + 5vh + 1.0rem); /* is header_logo + padding of header_logo + font size of menu */
+  }
+
+  .header_logo {
+    height: 11.5vh;
+    margin-top: 3vh;
+    padding-left: 2vw;
   }
 }
