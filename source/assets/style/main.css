@@ -355,7 +355,7 @@ body {
   }
 
   .logo {
-    position: initial; /* TODO: funktioniert - was heißt das? */
+    position: static; /* reset to default */
     max-width: 60%;
     min-width: 60%;
     transform: translate(25%, 0%); /* center it - see also margins below */
@@ -364,7 +364,6 @@ body {
   }
 
   .cover {
-    /* make it a TODO: Quadrat */
     width: 90%; /* see also margins */
     height: 90vw; /* see also margins */
     object-position: top;
