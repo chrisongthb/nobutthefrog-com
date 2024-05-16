@@ -114,7 +114,7 @@
   }
 
   #main-content-button-container {
-    margin-inline: 2em;
-    padding-inline: 2em;
+    margin-inline: 0px;
+    padding-inline: 5vw;
   }
 }

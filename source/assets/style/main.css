@@ -275,7 +275,7 @@ body {
   /* style */
   font-family: "Quicksand Bold";
   color: #2E2E2E;
-  font-size: larger; /* passt nicht bei 32:9 */
+  font-size: 1.1rem;
   user-select: none;
   cursor: pointer;
 }
@@ -340,7 +340,6 @@ body {
 #footer-copyright-flex-container * {
   padding: 0.5em;
 }
-
 
 
 
@@ -452,14 +451,30 @@ body {
   #showVideoImage {
     object-fit: cover;
     object-position: top;
-    object-position: 60% 0%;
-
-    max-width: 86%;
-    min-width: 60%;
-    transform: translate(0%, 0%); /* center it - see also margins below */
+    object-position: 60% 10%;
 
     min-height: 60vh;
     max-height: 60vh;
 
+    padding-inline: 2rem;
+    max-width: calc(100% - 4rem);
+    min-width: calc(100% - 4rem);
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  #showVideoImage {
+    object-fit: scale-down;
+    object-position: 50% 80%;
+    max-width: calc(100% - 4rem);
+    min-width: calc(100% - 4rem);
+    padding: 2rem;
+    box-shadow: #333 0px 0px 1em 0.1em;
+  }
+
+  #showVideoText {
+    color: #D7DDE2;
+    margin-top: 15vh;
   }
 }
