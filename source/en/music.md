@@ -6,4 +6,12 @@ path_to_other_lang: 'musik/'
 ---
 
       <p>TODO: content</p>
-      <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=2981873248/size=large/bgcol=ffffff/linkcol=63b2cc/transparent=true/" seamless><a href="https://nobutthefrog.bandcamp.com/album/rhythm-of-your-soul">Rhythm Of Your Soul von Nobutthefrog</a></iframe>
+      <div style="max-width: 500px;">
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 100%; padding-top: 205px;">
+                  <iframe src="https://bandcamp.com/EmbeddedPlayer/album=2981873248/size=large/bgcol=ffffff/linkcol=333333/transparent=true/"
+                        style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+                        allowfullscreen
+                        scrolling="no">
+                  </iframe>
+            </div>
+      </div>
