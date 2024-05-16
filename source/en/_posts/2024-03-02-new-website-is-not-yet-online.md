@@ -1,7 +1,8 @@
 ---
 layout: sub-page
-title:  "Our new website is not online YET!"
-date:   2024-05-12 12:00:00 +0100
+title: "Our new website is not online YET!"
+date: 2024-05-12 12:00:00 +0100
+lang: en
 ---
 Knock knock - who's there. Long time no see and still nothing changed. But there you go bla!
 
