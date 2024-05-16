@@ -2,6 +2,7 @@
 layout: sub-page
 title: Shop
 lang: en
+path_to_other_lang: 'shop/'
 ---
 
       <p>TODO: content, bandcamp shop "merch" section einrichten</p>

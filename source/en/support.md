@@ -1,8 +1,8 @@
 ---
 layout: sub-page
-title: Music
+title: Support us
 lang: en
-path_to_other_lang: 'musik/'
+path_to_other_lang: 'support/'
 ---
 
       <p>TODO: content</p>

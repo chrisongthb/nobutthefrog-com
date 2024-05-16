@@ -2,6 +2,7 @@
 layout: sub-page
 title: Newsletter
 lang: en
+path_to_other_lang: 'newsletter/'
 ---
 
       <p>TODO: content</p>

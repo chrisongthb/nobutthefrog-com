@@ -19,23 +19,17 @@
 
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
-    <a href="{{ site.baseurl }}/" class="active">Home</a>
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}aktuelles{% else %}en/blog{% endif %}">{% if page.lang ==
-      "de" %}Aktuelles{% else %}Blog{% endif %}</a>
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}">{% if page.lang
-      == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{% else %}en/music{% endif %}">{% if page.lang == "de"
-      %}Musik{% else %}Music{% endif %}</a>
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}termine{% else %}en/dates{% endif %}">{% if page.lang == "de"
-      %}Termine{% else %}Dates{% endif %}</a>
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}shop{% else %}en/shop{% endif %}">{% if page.lang == "de"
-      %}Shop{% else %}Shop{% endif %}</a>
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}kontakt{% else %}en/contact{% endif %}">{% if page.lang ==
-      "de" %}Kontakt{% else %}Contact{% endif %}</a>
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}en/{% else %}{% endif %}">
+    <a href="{{ site.baseurl }}/">Home</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}aktuelles{%  else %}en/blog{% endif       %}"{% if page.url contains "aktuelles"  or page.url contains "en/blog" or page.url contains "/posts/" %} class="active"{% endif %}>{% if page.lang == "de" %}Aktuelles{%  else %}Blog{%       endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}"{% if page.url contains "newsletter" or page.url contains "en/newsletter"                          %} class="active"{% endif %}>{% if page.lang == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{%      else %}en/music{% endif      %}"{% if page.url contains "musik"      or page.url contains "en/music"                               %} class="active"{% endif %}>{% if page.lang == "de" %}Musik{%      else %}Music{%      endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}termine{%    else %}en/dates{% endif      %}"{% if page.url contains "termine"    or page.url contains "en/dates"                               %} class="active"{% endif %}>{% if page.lang == "de" %}Termine{%    else %}Dates{%      endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}shop{%       else %}en/shop{% endif       %}"{% if page.url contains "shop"       or page.url contains "en/shop"                                %} class="active"{% endif %}>{% if page.lang == "de" %}Shop{%       else %}Shop{%       endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}kontakt{%    else %}en/contact{% endif    %}"{% if page.url contains "kontakt"    or page.url contains "en/contact"                             %} class="active"{% endif %}>{% if page.lang == "de" %}Kontakt{%    else %}Contact{%    endif %}</a>
+    <a href="{{ site.baseurl }}/{{ page.path_to_other_lang }}">
       <div id="language-selector-container"><img id="language-selector"
           src="{{ site.baseurl }}/assets/img/{% if page.lang == "de" %}gb.svg{% else %}de.svg{% endif %}" /></div>
-    </a> <!-- TODO: jekyll: add current path to href, sodass man auf der gleichen Seite wieder landet -->
+    </a>
     <a href="javascript:void(0);" id="menu-icon">
       <div id="menu-icon-bars-container">
         <div class="menu-icon-bar-1"></div>
@@ -60,8 +54,8 @@
     </main>
     <div class="content-flex-item" id="support-box">
       <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
-        <a id="support-link" href="{{ site.baseurl }}/support">
-          <p id="support-text">Unterstütze unsere künstlerische Arbeit</p>
+        <a id="support-link" href="{{ site.baseurl }}/{% if page.lang == "de" %}support{% else %}en/support{% endif %}">
+          <p id="support-text">{% if page.lang == "de" %}Unterstütze unsere künstlerische Arbeit{% else %}ToDo: support our very artsy business{% endif %}</p>
           <img id="support-image" src="{{ site.baseurl }}/assets/img/support_background.webp" />
         </a>
       </div>

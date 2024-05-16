@@ -239,7 +239,6 @@ body {
   height: 115vh;
   background-color: #000000;
   text-align: center;
-  transition: 900ms; /* TODO: fade out on tag deletion */
 }
 
 #yt-video {
@@ -260,10 +259,6 @@ body {
   border-radius: 0.3rem;
 }
 
-/*
-  TODO: maybe use filter: blur(0.1em) sepia(0.2);
-  Problem here is, that the Text then is no longer visible
-*/
 #showVideoImage:hover {
   box-shadow: 0px 0px 1em 10px #566313;
   cursor: pointer;
@@ -390,6 +385,7 @@ body {
   .topnav a {
     width: 80%;
     margin-inline: initial;
+    user-select: none
   }
 
   .topnav a:hover {

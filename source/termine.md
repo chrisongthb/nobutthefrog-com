@@ -2,6 +2,7 @@
 layout: sub-page
 title: Termine
 lang: de
+path_to_other_lang: 'en/dates/'
 ---
 
       <div id="songkick-widget-container">

@@ -2,6 +2,7 @@
 layout: sub-page
 title: Impressum
 lang: de
+path_to_other_lang: 'en/impress/'
 ---
 
 TODO evtl. aufsplitten

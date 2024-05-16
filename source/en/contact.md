@@ -2,6 +2,7 @@
 layout: sub-page
 title: Contact
 lang: en
+path_to_other_lang: 'kontakt/'
 ---
 
       <p>TODO: content</p>
