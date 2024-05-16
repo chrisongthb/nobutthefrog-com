@@ -1,13 +1,13 @@
 .header_logo {
   position: absolute;
-  height: 8vh;
-  margin-block: 2vh;
+  height: 4rem;
+  margin-block: 1.5rem;
   padding-inline: 2vw;
 }
 
 .header_cover {
   width: 100%;
-  height: calc(8vh + 4vh + 1.0rem); /* is header_logo + padding of header_logo + font size of menu */
+  height: 7rem;
   object-fit: cover;
   object-position: top;
   object-position: 0% 0%;
@@ -26,14 +26,14 @@
   top: 0px;
   /* for blurring the background, when .showitems*/
   padding-inline: 2vw;
-  padding-top: 3vh;
+  padding-top: 2.2rem;
   padding-bottom: 100vh;
   margin-right: initial;
   margin-top: initial;
 }
 
 .topnav a {
-  padding-inline: 0.7em;
+  padding-inline: 0.77rem;
   margin-inline: 0.1rem;
   padding-block: 0.5rem;
 }
@@ -93,6 +93,18 @@
 
 @media screen and (max-width: 1000px) {
 
+  .header_logo {
+    height: 3.5rem;
+    margin-block: 0.8rem;
+  }
+
+  .header_cover {
+    height: 5rem;
+  }
+
+  .topnav {
+    padding-top: 1.2rem;
+  }
   .topnav.showitems {
     position: absolute;
     width: calc(100% - 2vw - 2vw);
@@ -116,18 +128,5 @@
   #main-content-button-container {
     margin-inline: 0px;
     padding-inline: 5vw;
-  }
-}
-
-
-@media screen and (max-height: 500px) {
-  .header_cover {
-    height: calc(8vh + 5vh + 1.0rem); /* is header_logo + padding of header_logo + font size of menu */
-  }
-
-  .header_logo {
-    height: 11.5vh;
-    margin-top: 3vh;
-    padding-left: 2vw;
   }
 }
