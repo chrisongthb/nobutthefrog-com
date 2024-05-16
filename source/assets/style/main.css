@@ -462,7 +462,7 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 
   #showVideoImage {
     object-fit: scale-down;
@@ -476,5 +476,10 @@ body {
   #showVideoText {
     color: #D7DDE2;
     margin-top: 15vh;
+  }
+
+  /* Fix too wide code block on small screens */
+  #main-content-box figure {
+    margin-inline: 0px;
   }
 }
