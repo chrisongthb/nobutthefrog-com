@@ -3,6 +3,7 @@ layout: sub-page
 title: "Our new website is not online YET!"
 date: 2024-05-12 12:00:00 +0100
 lang: en
+path_to_other_lang: 'de/posts/neue-website-ist-nicht-online/'
 ---
 Knock knock - who's there. Long time no see and still nothing changed. But there you go bla!
 

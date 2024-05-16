@@ -3,6 +3,7 @@ layout: sub-page
 title: "Unsere neue Website ist NICHT online!"
 date: 2024-05-12 12:00:00 +0100
 lang: de
+path_to_other_lang: 'en/posts/new-website-is-not-yet-online/'
 ---
 Na da schau mal einer an - lange hat sich nix getan und jetzt ist es doch nicht so weit. Aber lest selbst.
 
