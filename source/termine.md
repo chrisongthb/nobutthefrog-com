@@ -1,6 +1,7 @@
 ---
 layout: sub-page
 title: Termine
+lang: de
 ---
 
       <div id="songkick-widget-container">

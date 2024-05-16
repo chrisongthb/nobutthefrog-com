@@ -1,6 +1,7 @@
 ---
 layout: sub-page
 title: Impressum
+lang: de
 ---
 
 TODO evtl. aufsplitten

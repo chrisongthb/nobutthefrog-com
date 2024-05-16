@@ -1,12 +1,11 @@
 ---
 layout: sub-page
-title:  "Unsere neue Website ist NICHT online!"
+title:  "Our new website is not online YET!"
 date:   2024-05-12 12:00:00 +0100
-categories: blog
 ---
-Na da schau mal einer an - lange hat sich nix getan und jetzt ist es doch nicht so weit. Aber lest selbst.
+Knock knock - who's there. Long time no see and still nothing changed. But there you go bla!
 
-Erster Blogpost hier und da. 
+First blog post jeah
 
 {% highlight ruby %}
 def print_hi(name)

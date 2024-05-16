@@ -37,7 +37,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # shorten blogpost links
-permalink: posts/:title/
+permalink: :categories/posts/:title/
 
 # Build settings
 plugins:

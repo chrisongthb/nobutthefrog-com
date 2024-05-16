@@ -1,5 +1,8 @@
+
   {% for post in site.posts %}
-    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-    <p>{{ post.date | date: "%-d %B %Y" }}</p>
-    <p>{{ post.excerpt }}</p>
+    {% if post.categories contains page.lang %}
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.date | date: "%-d %B %Y" }}</p>
+      <p>{{ post.excerpt }}</p>
+    {% endif %}
   {% endfor %}

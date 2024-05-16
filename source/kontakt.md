@@ -1,6 +1,7 @@
 ---
 layout: sub-page
 title: Kontakt
+lang: de
 ---
 
       <p>TODO: content</p>

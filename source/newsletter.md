@@ -1,6 +1,7 @@
 ---
 layout: sub-page
 title: Newsletter
+lang: de
 ---
 
       <p>TODO: content</p>
