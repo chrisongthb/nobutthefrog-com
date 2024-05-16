@@ -183,6 +183,11 @@ body {
   text-align: justify;
 }
 
+#main-content-box a {
+  color: #9E3E2F;
+  text-decoration: none;
+}
+
 #support-box-button-container {
   height: 100%;
 }
@@ -340,7 +345,11 @@ body {
 #footer-copyright-flex-container * {
   padding: 0.5em;
 }
-
+#footer-copyright-flex-container a {
+  color: #9E3E2F;
+  text-decoration: none;
+  padding-inline: 0px;
+}
 
 
 
