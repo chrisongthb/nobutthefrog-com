@@ -21,6 +21,7 @@
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
     <a href="{{ site.baseurl }}/">Home</a>
+    {% if page.not_in_menu %}<a href="{{ site.baseurl }}/{{ page.url }}" class="active">{{ page.title }}</a>{% endif %}
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}aktuelles{%  else %}en/blog{% endif       %}"{% if page.url contains "aktuelles"  or page.url contains "en/blog" or page.url contains "/posts/" %} class="active"{% endif %}>{% if page.lang == "de" %}Aktuelles{%  else %}Blog{%       endif %}</a>
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}"{% if page.url contains "newsletter" or page.url contains "en/newsletter"                          %} class="active"{% endif %}>{% if page.lang == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{%      else %}en/music{% endif      %}"{% if page.url contains "musik"      or page.url contains "en/music"                               %} class="active"{% endif %}>{% if page.lang == "de" %}Musik{%      else %}Music{%      endif %}</a>
@@ -56,7 +57,7 @@
     <div class="content-flex-item" id="support-box">
       <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
         <a id="support-link" href="{{ site.baseurl }}/{% if page.lang == "de" %}support{% else %}en/support{% endif %}">
-          <p id="support-text">{% if page.lang == "de" %}Unterstütze unsere künstlerische Arbeit{% else %}ToDo: support our very artsy business{% endif %}</p>
+          <p id="support-text">{% if page.lang == "de" %}Unterstütze unsere künstlerische Arbeit{% else %}Support us as independent artists!{% endif %}</p>
           <img id="support-image" src="{{ site.baseurl }}/assets/img/support_background.webp" />
         </a>
       </div>

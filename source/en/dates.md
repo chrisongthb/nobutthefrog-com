@@ -5,6 +5,8 @@ lang: en
 path_to_other_lang: 'termine/'
 ---
 
+      <p>We travel quite a lot and will definitely come to your area!</p>
+      <p>Connecting with people is very important to us. We write songs to play on stages around the world. If you would like to come to one of our concerts but are short of money, we always have a few places available on the guest list. Just send us an e-mail (<a href="mailto:contact@nobutthefrog.com">contact@nobutthefrog.com</a>).</p>
       <div id="songkick-widget-container">
         <a href="https://www.songkick.com/artists/9802904" class="songkick-widget" data-theme="light" data-track-button="on"
           data-detect-style="on" data-background-color="rgb(0,0,0,0)" data-font-color="rgb(0,0,0,1)"
