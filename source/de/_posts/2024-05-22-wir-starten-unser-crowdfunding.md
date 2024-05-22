@@ -1,7 +1,7 @@
 ---
 layout: sub-page
 title: "Große Neuigkeiten - wir starten ein Crowdfunding für unser Neues Album!"
-date: 2024-06-01 12:00:00 +0100
+date: 2024-05-22 12:00:00 +0100
 lang: de
 path_to_other_lang: 'en/posts/we-kick-off-our-crowdfunding/'
 ---

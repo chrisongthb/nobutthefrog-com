@@ -1,7 +1,7 @@
 ---
 layout: sub-page
 title: "Big News! We are starting a crowdfunding for our new album!"
-date: 2024-06-01 12:00:00 +0100
+date: 2024-05-22 12:00:00 +0100
 lang: en
 path_to_other_lang: 'en/posts/wir-starten-unser-crowdfunding/'
 ---
