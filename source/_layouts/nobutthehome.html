@@ -22,7 +22,7 @@
 
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
-    <a label="{% if page.lang == "de" %}gehe zum Home{% else %}go to home{% endif %}" href="{{ site.baseurl }}/" class="active">Home</a>
+    <a label="{% if page.lang == "de" %}gehe zum Home{% else %}go to home{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "en" %}en/{% endif %}" class="active">Home</a>
     <a label="{% if page.lang == "de" %}gehe zum Blog{% else %}go to blog{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{% else %}en/blog{% endif %}">{% if page.lang ==
       "de" %}Blog{% else %}Blog{% endif %}</a>
     <a label="{% if page.lang == "de" %}gehe zur Seite Newsletter{% else %}go to newsletter{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}">{% if page.lang
@@ -104,10 +104,12 @@
           class="socicon-spotify"></span></a>
       <a target="_blank" title="Follow us on Youtube" href="https://www.youtube.com/c/nobutthefrog"><span
           class="socicon-youtube"></span></a>
-    </div>
+      <a target="_blank" title="Follow us on Soundcloud" href="https://soundcloud.com/nobutthefrog"><span
+        class="socicon-soundcloud"></span></a>
+        </div>
     <div id="footer-links-flex-container">
-      <a href="{{ site.baseurl }}/impressum">Impressum</a>
-      <a href="{{ site.baseurl }}/datenschutz">Datenschutz</a>
+      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}impressum{% else %}en/legal{% endif %}">{% if page.lang == "de" %}Impressum{% else %}Legal Notice{% endif %}</a>
+      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}datenschutz{% else %}en/privacy{% endif %}">{% if page.lang == "de" %}Datenschutz{% else %}Privacy Policy{% endif %}</a>
       <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Presskit for Venues</a>
     </div>
     <div id="footer-copyright-flex-container">

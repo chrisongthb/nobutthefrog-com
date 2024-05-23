@@ -1,8 +1,9 @@
 ---
 layout: sub-page
+extra_include: current_date.html
 title: Impressum
 lang: de
-path_to_other_lang: 'en/impress/'
+path_to_other_lang: 'en/legal/'
 not_in_menu: true
 ---
 
@@ -113,3 +114,5 @@ Sofern Ihr Wunsch nicht mit einer gesetzlichen Pflicht zur Aufbewahrung von Date
 Nutzer dieser Webseite können von ihrem Widerspruchsrecht Gebrauch machen und der Verarbeitung ihrer personenbezogenen Daten zu jeder Zeit widersprechen.
 
 Wenn Sie eine Berichtigung, Sperrung, Löschung oder Auskunft über die zu Ihrer Person gespeicherten personenbezogenen Daten wünschen oder Fragen bzgl. der Erhebung, Verarbeitung oder Verwendung Ihrer personenbezogenen Daten haben oder erteilte Einwilligungen widerrufen möchten, wenden Sie sich bitte an folgende E-Mail-Adresse: [E-Mail-Adresse einfügen] TODO
+
+Zuletzt aktualisiert:

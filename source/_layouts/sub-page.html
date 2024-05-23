@@ -20,7 +20,7 @@
 
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
-    <a href="{{ site.baseurl }}/">Home</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "en" %}en/{% endif %}">Home</a>
     {% if page.not_in_menu %}<a href="{{ site.baseurl }}/{{ page.url }}" class="active">{{ page.title }}</a>{% endif %}
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{%  else %}en/blog{% endif       %}"{% if page.url contains "blog"  or page.url contains "en/blog" or page.url contains "/posts/" %} class="active"{% endif %}>{% if page.lang == "de" %}Blog{%  else %}Blog{%       endif %}</a>
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}"{% if page.url contains "newsletter" or page.url contains "en/newsletter"                          %} class="active"{% endif %}>{% if page.lang == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
@@ -76,11 +76,12 @@
           class="socicon-spotify"></span></a>
       <a target="_blank" title="Follow us on Youtube" href="https://www.youtube.com/c/nobutthefrog"><span
           class="socicon-youtube"></span></a>
-    </div>
+      <a target="_blank" title="Follow us on Soundcloud" href="https://soundcloud.com/nobutthefrog"><span
+        class="socicon-soundcloud"></span></a>
+      </div>
     <div id="footer-links-flex-container">
-      <a href="{{ site.baseurl }}/impressum">Impressum</a>
-      <a href="{{ site.baseurl }}/datenschutz">Datenschutz</a>
-      <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Presskit for Venues</a>
+      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}impressum{% else %}en/legal{% endif %}">{% if page.lang == "de" %}Impressum{% else %}Legal Notice{% endif %}</a>
+      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}datenschutz{% else %}en/privacy{% endif %}">{% if page.lang == "de" %}Datenschutz{% else %}Privacy Policy{% endif %}<a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Presskit for Venues</a>
     </div>
     <div id="footer-copyright-flex-container">
       <span>© {{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/">nobutthefrog</a></span>
