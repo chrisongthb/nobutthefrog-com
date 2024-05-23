@@ -22,7 +22,7 @@
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
     <a href="{{ site.baseurl }}/">Home</a>
     {% if page.not_in_menu %}<a href="{{ site.baseurl }}/{{ page.url }}" class="active">{{ page.title }}</a>{% endif %}
-    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}aktuelles{%  else %}en/blog{% endif       %}"{% if page.url contains "aktuelles"  or page.url contains "en/blog" or page.url contains "/posts/" %} class="active"{% endif %}>{% if page.lang == "de" %}Aktuelles{%  else %}Blog{%       endif %}</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{%  else %}en/blog{% endif       %}"{% if page.url contains "blog"  or page.url contains "en/blog" or page.url contains "/posts/" %} class="active"{% endif %}>{% if page.lang == "de" %}Blog{%  else %}Blog{%       endif %}</a>
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}"{% if page.url contains "newsletter" or page.url contains "en/newsletter"                          %} class="active"{% endif %}>{% if page.lang == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{%      else %}en/music{% endif      %}"{% if page.url contains "musik"      or page.url contains "en/music"                               %} class="active"{% endif %}>{% if page.lang == "de" %}Musik{%      else %}Music{%      endif %}</a>
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}termine{%    else %}en/dates{% endif      %}"{% if page.url contains "termine"    or page.url contains "en/dates"                               %} class="active"{% endif %}>{% if page.lang == "de" %}Termine{%    else %}Dates{%      endif %}</a>

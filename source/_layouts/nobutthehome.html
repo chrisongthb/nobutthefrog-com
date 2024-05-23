@@ -23,8 +23,8 @@
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
     <a label="{% if page.lang == "de" %}gehe zum Home{% else %}go to home{% endif %}" href="{{ site.baseurl }}/" class="active">Home</a>
-    <a label="{% if page.lang == "de" %}gehe zur Seite Aktuelles{% else %}go to blog{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}aktuelles{% else %}en/blog{% endif %}">{% if page.lang ==
-      "de" %}Aktuelles{% else %}Blog{% endif %}</a>
+    <a label="{% if page.lang == "de" %}gehe zum Blog{% else %}go to blog{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{% else %}en/blog{% endif %}">{% if page.lang ==
+      "de" %}Blog{% else %}Blog{% endif %}</a>
     <a label="{% if page.lang == "de" %}gehe zur Seite Newsletter{% else %}go to newsletter{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}">{% if page.lang
       == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
     <a label="{% if page.lang == "de" %}gehe zur Seite Musik{% else %}go to music{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{% else %}en/music{% endif %}">{% if page.lang == "de"

@@ -3,7 +3,7 @@ layout: sub-page
 title: "Big News! We are starting a crowdfunding for our new album!"
 date: 2024-05-22 12:00:00 +0100
 lang: en
-path_to_other_lang: 'en/posts/wir-starten-unser-crowdfunding/'
+path_to_other_lang: 'de/posts/wir-starten-unser-crowdfunding/'
 ---
 
 From June 1 to July 31, 2024, we are collecting money via the “Startnext” platform for our new album “Right where you are”. We already have the masters of 8 songs, which we recorded last year on a few hot summer days in Anka's grandmother's barn on the edge of Franconian Switzerland. Stop by and support us with a donation! 
