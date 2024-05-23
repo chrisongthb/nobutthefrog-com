@@ -91,6 +91,7 @@ body {
   font-size: 1.3rem;
   flex-direction: row;
   margin-block: 1rem;
+  white-space: nowrap;
 }
 
 .topnav a {
