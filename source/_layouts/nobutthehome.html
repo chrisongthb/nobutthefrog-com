@@ -12,8 +12,31 @@
 </head>
 
 <body>
-  <a label="{% if page.lang == "de" %}scrolle ein bisschen herunter{% else %}scroll down a bit{% endif %}" href="#arrows"><img alt="{% if page.lang == "de" %}Schriftzug Nobutthefrog{% else %}Lettering Nobutthefrog{% endif %}" class="logo" src="{{ site.baseurl }}/assets/img/logo.webp" /></a>
-  <a label="{% if page.lang == "de" %}scrolle ein bisschen herunter{% else %}scroll down a bit{% endif %}" href="#arrows"><img alt="{% if page.lang == "de" %}Anka und René stehen mit Geige und Gitarre am Strand, während von hinten das schäumende Wasser die beiden nass macht{% else %}Anka and René are standing on the beach playing violin and guitar, while the water from the see splashes them{% endif %}" class="cover" src="{{ site.baseurl }}/assets/img/cover.webp" /></a>
+  <a
+    label="{% if page.lang == "de" %}scrolle ein bisschen herunter{% else %}scroll down a bit{% endif %}"
+    href="#arrows">
+      <img alt="{% if page.lang == "de" %}Schriftzug Nobutthefrog{% else %}Lettering Nobutthefrog{% endif %}"
+           class="logo"
+           src="{{ site.baseurl }}/assets/img/logo.webp"
+      />
+  </a>
+  <a
+    label="{% if page.lang == "de" %}scrolle ein bisschen herunter{% else %}scroll down a bit{% endif %}"
+    href="#arrows">
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+    <picture>
+      <source media="(max-width: 1000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" />
+      <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" />
+      <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" />
+      <source media="(max-width: 5000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" />
+      <img
+        alt="{% if page.lang == "de" %}Anka und René laufen am Strand und spielen auf der Geige und auf der Gitarre. Die Sonne scheint und im Hintergrund brechen weiße Wellen.{% else %}Anka and René are walking on the beach playing violin and guitar. The sun is shining and white waves are breaking in the background.{% endif %}"
+        src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp"
+        class="cover"
+      />
+    </picture>
+
+  </a>
   <svg description="{% if page.lang == "de" %}Animierte, nach unten zeigende Pfeile{% else %}Animated arrows pointing down{% endif %}" id="arrows"> <!-- https://codepen.io/postor/pen/vYpNYg -->
     <path class="a1" d="M0 0 L30 32 L60 0"></path>
     <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -110,7 +133,7 @@
     <div id="footer-links-flex-container">
       <a href="{{ site.baseurl }}/{% if page.lang == "de" %}impressum{% else %}en/legal{% endif %}">{% if page.lang == "de" %}Impressum{% else %}Legal Notice{% endif %}</a>
       <a href="{{ site.baseurl }}/{% if page.lang == "de" %}datenschutz{% else %}en/privacy{% endif %}">{% if page.lang == "de" %}Datenschutz{% else %}Privacy Policy{% endif %}</a>
-      <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Presskit for Venues</a>
+      <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd" target="_blank">{% if page.lang == "de" %}Pressemappe (EPK){% else %}Presskit (EPK){% endif %}</a>
     </div>
     <div id="footer-copyright-flex-container">
       <span>© {{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/">nobutthefrog</a></span>

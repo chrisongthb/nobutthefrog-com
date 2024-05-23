@@ -15,7 +15,17 @@
 <body>
   <div class="header">
     <a href="{{ site.baseurl }}/" ><img class="header_logo" src="{{ site.baseurl }}/assets/img/logo.webp" /></a>
-    <img class="header_cover" src="{{ site.baseurl }}/assets/img/cover.webp" />
+    <picture>
+      <source media="(max-width: 1000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" />
+      <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" />
+      <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" />
+      <source media="(max-width: 5000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" />
+      <img
+        alt="{% if page.lang == "de" %}Anka und René laufen am Strand und spielen auf der Geige und auf der Gitarre. Die Sonne scheint und im Hintergrund brechen weiße Wellen.{% else %}Anka and René are walking on the beach playing violin and guitar. The sun is shining and white waves are breaking in the background.{% endif %}"
+        src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp"
+        class="header_cover"
+      />
+    </picture>
   </div>
 
   <!-- menu -->
@@ -81,8 +91,9 @@
       </div>
     <div id="footer-links-flex-container">
       <a href="{{ site.baseurl }}/{% if page.lang == "de" %}impressum{% else %}en/legal{% endif %}">{% if page.lang == "de" %}Impressum{% else %}Legal Notice{% endif %}</a>
-      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}datenschutz{% else %}en/privacy{% endif %}">{% if page.lang == "de" %}Datenschutz{% else %}Privacy Policy{% endif %}<a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Presskit for Venues</a>
-    </div>
+      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}datenschutz{% else %}en/privacy{% endif %}">{% if page.lang == "de" %}Datenschutz{% else %}Privacy Policy{% endif %}
+        <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd" target="_blank">{% if page.lang == "de" %}Pressemappe (EPK){% else %}Presskit (EPK){% endif %}</a>
+      </div>
     <div id="footer-copyright-flex-container">
       <span>© {{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/">nobutthefrog</a></span>
     </div>
