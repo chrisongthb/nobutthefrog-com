@@ -1,0 +1,8 @@
+{
+    "name": "Nobutthefrog",
+    "short_name": "Nobutthefrog",
+    "theme_color": "#fafad2",
+    "background_color": "#fafad2",
+    "start_url": "https://nobutthefrog.com/",
+    "display": "standalone"
+}
