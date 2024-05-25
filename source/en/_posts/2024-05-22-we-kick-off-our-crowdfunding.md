@@ -3,6 +3,7 @@ layout: sub-page
 title: "Big News! We are starting a crowdfunding for our new album!"
 date: 2024-05-22 12:00:00 +0100
 lang: en
+extra_include: go_back_to_blog.html
 path_to_other_lang: 'de/posts/wir-starten-unser-crowdfunding/'
 ---
 
