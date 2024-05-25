@@ -254,11 +254,21 @@ body {
 }
 
 #showVideoImage {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  transition: 200ms;
+  border-radius: 0.3rem;
+}
+/* This is only useful, if the picture is landscape and not portrait format  */
+/*
+#showVideoImage {
   min-height: 100%;
   max-height: 100%;
   transition: 200ms;
   border-radius: 0.3rem;
 }
+*/
 
 #showVideoImage:hover {
   box-shadow: 0px 0px 1em 10px #566313;
@@ -269,7 +279,7 @@ body {
   /* position */
   position: absolute; /* see also parent div: (relative)*/
   left: 50%;
-  margin-top: 10vh; /* #yt-video has 10% frame */
+  margin-top: calc(10vh + 0.5em); /* #yt-video has 10% frame */
   transform: translate(-50%, -50%);
   z-index: 1;
 
@@ -279,6 +289,11 @@ body {
   font-size: 1.1rem;
   user-select: none;
   cursor: pointer;
+
+  border-radius: 0.3rem;
+	background-color: #DCCD8990;
+  padding-block: 0.5em;
+  padding-inline: 1.5em;
 }
 
 /*
@@ -453,6 +468,9 @@ body {
     margin-top: 5vh;
   }
 
+  /* Fix too wide code block on small screens */
+  /* This is only useful, if the picture is landscape and not portrait format */
+  /*
   #showVideoImage {
     object-fit: cover;
     object-position: top;
@@ -465,8 +483,12 @@ body {
     max-width: calc(100% - 4rem);
     min-width: calc(100% - 4rem);
   }
+  */
 }
 
+/* Fix too wide code block on small screens */
+/* This is only useful, if the picture is landscape and not portrait format */
+/*
 @media screen and (max-width: 500px) {
 
   #showVideoImage {
@@ -483,8 +505,8 @@ body {
     margin-top: 15vh;
   }
 
-  /* Fix too wide code block on small screens */
   #main-content-box figure {
     margin-inline: 0px;
   }
 }
+*/
