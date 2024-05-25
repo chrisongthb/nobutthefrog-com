@@ -26,7 +26,7 @@
   {% if jekyll.environment == "production" %}
    {% assign nbtf_url = {{ site.url }} %}
   {% else %}
-    {% assign nbtf_url = "chrisongthb.github.io" %}
+    {% assign nbtf_url = {{ site.development_url }} %}
   {% endif %}
 
   <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
