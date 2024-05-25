@@ -25,17 +25,9 @@
 #
 # #################
 
-title: nobutthetest
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
 # baseurl: "" # see also github workflow: bundle exec jekyll build --baseurl <github variable>
 url: "https://nobutthefrog.com" # the base hostname & protocol for your site, e.g. http://example.com
 development_url: "https://chrisongthb.github.io" # see metadata.html
-twitter_username: jekyllrb
-github_username:  jekyll
 
 excerpt_separator: '<!--more-->'
 
@@ -45,7 +37,11 @@ permalink: :categories/posts/:title/
 # Build settings
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
+
+# used by jekyll-feed
+title: 'Nobutthefrog'
+author: 'Nobutthefrog'
+description: 'We are trying to catch the best waves driving around europe and are searching for people, who connect with our vibes and our music.'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
