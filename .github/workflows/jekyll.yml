@@ -46,7 +46,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
-        run: cd "source"; ls -l; bundle exec jekyll build --host 'chrisongthb.github.io' --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: cd "source"; ls -l; bundle exec jekyll build --url 'chrisongthb.github.io' --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
