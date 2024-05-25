@@ -3,6 +3,6 @@
     {% if post.categories contains page.lang %}
       <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.date | date: "%-d %B %Y" }}</p>
-      <p>{{ post.excerpt }}</p>
+      <p>{{ post.excerpt | strip_html | append: '&#8230;' }}</p>
     {% endif %}
   {% endfor %}
