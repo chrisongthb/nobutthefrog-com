@@ -462,6 +462,7 @@ body {
     margin-block: initial;
     margin-inline: 5vw;
     margin-top: 5vh;
+    flex-basis: initial;
   }
 
   #video-box {
