@@ -12,4 +12,4 @@ Es gibt u.a. wieder den legendären Apfelkuchen & Besuch von uns, außerdem nat�
 
 Wir freuen uns über kleinen und großen Support, jeder Euro zählt!
 
-[Besuche unser Crowdfunding auf startnext.com](https://www.startnext.com/nbtf-right-where-you-are)
+[Besuche unser Crowdfunding auf startnext.com](https://www.startnext.com/nbtf-right-where-you-are){:target="_blank"}

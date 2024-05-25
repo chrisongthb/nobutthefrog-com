@@ -12,4 +12,4 @@ There will be the legendary apple pie & a visit from us again, plus of course th
 
 We are happy about small and big support, every Euro counts! 
 
-[Visit our Crowdfunding on startnext.com](https://www.startnext.com/nbtf-right-where-you-are)
+[Visit our Crowdfunding on startnext.com](https://www.startnext.com/nbtf-right-where-you-are){:target="_blank"}
