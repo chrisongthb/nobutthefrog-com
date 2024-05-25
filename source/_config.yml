@@ -25,6 +25,7 @@
 #
 # #################
 
+# see also https://stackoverflow.com/a/27400343
 # baseurl: "" # see also github workflow: bundle exec jekyll build --baseurl <github variable>
 url: "https://nobutthefrog.com" # the base hostname & protocol for your site, e.g. http://example.com
 development_url: "https://chrisongthb.github.io" # see metadata.html

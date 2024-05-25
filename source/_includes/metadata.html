@@ -24,9 +24,9 @@
   <!-- some tags are generated with https://metatags.io -->
 
   {% if jekyll.environment == "production" %}
-   {% assign nbtf_url = {{ site.url }} %}
+   {% assign nbtf_url = site.url %}
   {% else %}
-    {% assign nbtf_url = {{ site.development_url }} %}
+    {% assign nbtf_url = site.development_url %}
   {% endif %}
 
   <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
