@@ -18,7 +18,7 @@
     <p class="post_date">{% if page.lang == "de" %}{{ post.date | date: "%-d.%m.%Y" }}{% else %}{{ post.date | date: "%Y-%m-%-d" }}{% endif %}</p>
     <p>{{ post.excerpt | strip_html | append: '&#8230;' }}</p>
     {% if post.blog_list_image %}
-    <a href="{{ site.baseurl }}{{ post.url }}"><img class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }} "></a>
+    <a href="{{ site.baseurl }}{{ post.url }}"><img class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }}"></a>
     {% endif %}
   {% endif %}
 {% endfor %}
