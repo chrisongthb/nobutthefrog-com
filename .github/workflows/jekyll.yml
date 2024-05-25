@@ -4,12 +4,12 @@
 # documentation.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+name: Deploy Jekyll site to Pages for development purpose
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting the development branch
   push:
-    branches: ["main"]
+    branches: ["devel"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,14 +27,17 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
   # Build job
   build:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: main
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
@@ -42,13 +45,16 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
           working-directory: "source/"
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+
       - name: Build with Jekyll
         run: cd "source"; ls -l; bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
-          JEKYLL_ENV: production
+          JEKYLL_ENV: development
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
