@@ -1,11 +1,12 @@
 /*
-  This is a catch-all for all images in blog posts
+  This is a catch-all for all images in blog posts and ist list
   All other images have a dedicated rule
 */
 #main-content-box img {
   height: auto;
   max-width: 100%;
   width: 22rem;
+  border-radius: 0.3rem;
 }
 
 .header_logo {
