@@ -1,3 +1,13 @@
+/*
+  This is a catch-all for all images in blog posts
+  All other images have a dedicated rule
+*/
+#main-content-box img {
+  height: auto;
+  max-width: 100%;
+  width: 22rem;
+}
+
 .header_logo {
   position: absolute;
   height: 4rem;
@@ -27,7 +37,7 @@
   /* for blurring the background, when .showitems*/
   padding-inline: 2vw;
   padding-top: 2.2rem;
-  padding-bottom: 100vh;
+  padding-bottom: 0px;
   margin-right: initial;
   margin-top: initial;
 }
@@ -116,6 +126,7 @@
     -webkit-backdrop-filter: blur(0.9em);
     border-radius: 0.3rem;
     z-index: 100;
+    padding-bottom: 100vh;
   }
 
   .topnav.showitems a {

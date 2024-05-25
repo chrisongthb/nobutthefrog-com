@@ -1,8 +1,24 @@
 
-  {% for post in site.posts %}
-    {% if post.categories contains page.lang %}
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.date | date: "%-d %B %Y" }}</p>
-      <p>{{ post.excerpt | strip_html | append: '&#8230;' }}</p>
+<style>
+.post_title {
+  margin-bottom: 0.3rem;
+}
+.post_date {
+  margin-top: 0rem;
+}
+.post_image {
+  height: auto;
+  width: 22rem;
+  max-width: 100%;
+}
+</style>
+{% for post in site.posts %}
+  {% if post.categories contains page.lang %}
+    <h2 class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    <p class="post_date">{% if page.lang == "de" %}{{ post.date | date: "%-d.%m.%Y" }}{% else %}{{ post.date | date: "%Y-%m-%-d" }}{% endif %}</p>
+    <p>{{ post.excerpt | strip_html | append: '&#8230;' }}</p>
+    {% if post.blog_list_image %}
+    <a href="{{ site.baseurl }}{{ post.url }}"><img class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }} "></a>
     {% endif %}
-  {% endfor %}
+  {% endif %}
+{% endfor %}
