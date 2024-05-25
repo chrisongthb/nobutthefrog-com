@@ -1,0 +1,57 @@
+
+<style>
+  #newsletter-box-container {
+    padding-block: 3rem;
+    position: relative; /* see also #support-text position absolute */
+    text-align: center;
+  }
+  #newsletter-text {
+    /* position */
+    position: absolute; /* see also parent div: (relative)*/
+    left: 50%;
+    margin-top: 1.5em;
+    transform: translate(-50%, 0%);
+
+    /* style */
+    font-family: "Quicksand Bold";
+    color: black;
+    background-color: #DCCD8990;
+    padding-block: 0.3em;
+    padding-inline: 1em;
+    user-select: none;
+    border-radius: 0.3rem;
+  }
+  #newsletter-image {
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+  }
+
+  /*
+    Trigger image shadow on hover of the a element
+    https://stackoverflow.com/a/4502693
+  */
+  #newsletter-link:hover > #newsletter-image{
+    box-shadow: 0px 0px 1em 0.1em #566313;
+  }
+</style>
+
+{% if page.lang == "de" %}
+
+<div id="newsletter-box-container"> <!--- This is needed to force <a > to respect parent's boarders -->
+  <a id="newsletter-link" target="_blank" href="http://eepurl.com/isboko">
+    <p style="text-align: center;" id="newsletter-text">Abboniere unseren Newsletter</p>
+    <img style="width: 40rem;" id="newsletter-image" src="{{ site.baseurl }}/assets/img/imm022_N22_1000_70percent.webp" alt="René geht mit dem Surfbrett unter dem Arm ins Wasser"/>
+  </a>
+</div>
+
+{% else %}
+
+<div id="newsletter-box-container"> <!--- This is needed to force <a > to respect parent's boarders -->
+  <a id="newsletter-link" target="_blank" href="http://eepurl.com/isboko">
+    <p style="text-align: center;" id="newsletter-text">Checkout our Newsletter</p>
+    <img style="width: 40rem;" id="newsletter-image" src="{{ site.baseurl }}/assets/img/imm022_N22_1000_70percent.webp" alt="René goes into the water with his surfboard"/>
+  </a>
+</div>
+
+{% endif %}
