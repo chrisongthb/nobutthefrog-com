@@ -1,8 +1,8 @@
 ---
 layout: sub-page
-title: 'Website Terms and Conditions of Use'
+title: 'Impressum'
 lang: de
-path_to_other_lang: 'en/terms-of-servie/'
+path_to_other_lang: 'en/terms-of-service/'
 not_in_menu: true
 ---
 
