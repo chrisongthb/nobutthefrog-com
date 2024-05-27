@@ -1,24 +1,13 @@
 
-<style>
-.post_title {
-  margin-bottom: 0.3rem;
-}
-.post_date {
-  margin-top: 0rem;
-}
-.post_image {
-  height: auto;
-  width: 22rem;
-  max-width: 100%;
-}
-</style>
 {% for post in site.posts %}
   {% if post.categories contains page.lang %}
     <h2 class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
     <p class="post_date">{% if page.lang == "de" %}{{ post.date | date: "%-d.%m.%Y" }}{% else %}{{ post.date | date: "%Y-%m-%-d" }}{% endif %}</p>
     <p>{{ post.excerpt | strip_html | append: '&#8230;' }}</p>
     {% if post.blog_list_image %}
-    <a href="{{ site.baseurl }}{{ post.url }}"><img class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }}"></a>
+    <a href="{{ site.baseurl }}{{ post.url }}"><img alt="{% if page.lang == "de" %}Titelbild für Post '{{ post.title }}'{% else %}Featured image for blog post '{{ post.title }}'{% endif %}" class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }}"></a>
     {% endif %}
   {% endif %}
 {% endfor %}
+
+title
