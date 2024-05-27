@@ -14,7 +14,6 @@
 
 <body>
   <a
-    label="{% if page.lang == "de" %}scrolle ein bisschen herunter{% else %}scroll down a bit{% endif %}"
     href="#arrows">
       <img alt="{% if page.lang == "de" %}Schriftzug Nobutthefrog{% else %}Lettering Nobutthefrog{% endif %}"
            class="logo"
@@ -22,7 +21,6 @@
       />
   </a>
   <a
-    label="{% if page.lang == "de" %}scrolle ein bisschen herunter{% else %}scroll down a bit{% endif %}"
     href="#arrows">
     <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
     <picture>
@@ -38,7 +36,7 @@
     </picture>
 
   </a>
-  <svg description="{% if page.lang == "de" %}Animierte, nach unten zeigende Pfeile{% else %}Animated arrows pointing down{% endif %}" id="arrows"> <!-- https://codepen.io/postor/pen/vYpNYg -->
+  <svg id="arrows"> <!-- https://codepen.io/postor/pen/vYpNYg -->
     <path class="a1" d="M0 0 L30 32 L60 0"></path>
     <path class="a2" d="M0 20 L30 52 L60 20"></path>
     <path class="a3" d="M0 40 L30 72 L60 40"></path>
@@ -46,20 +44,20 @@
 
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
-    <a label="{% if page.lang == "de" %}gehe zum Home{% else %}go to home{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "en" %}en/{% endif %}" class="active">Home</a>
-    <a label="{% if page.lang == "de" %}gehe zum Blog{% else %}go to blog{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{% else %}en/blog{% endif %}">{% if page.lang ==
+    <a href="{{ site.baseurl }}/{% if page.lang == "en" %}en/{% endif %}" class="active">Home</a>
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{% else %}en/blog{% endif %}">{% if page.lang ==
       "de" %}Blog{% else %}Blog{% endif %}</a>
-    <a label="{% if page.lang == "de" %}gehe zur Seite Newsletter{% else %}go to newsletter{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}">{% if page.lang
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}newsletter{% else %}en/newsletter{% endif %}">{% if page.lang
       == "de" %}Newsletter{% else %}Newsletter{% endif %}</a>
-    <a label="{% if page.lang == "de" %}gehe zur Seite Musik{% else %}go to music{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{% else %}en/music{% endif %}">{% if page.lang == "de"
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}musik{% else %}en/music{% endif %}">{% if page.lang == "de"
       %}Musik{% else %}Music{% endif %}</a>
-    <a label="{% if page.lang == "de" %}gehe zur Seite Termine{% else %}go to dates{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}termine{% else %}en/dates{% endif %}">{% if page.lang == "de"
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}termine{% else %}en/dates{% endif %}">{% if page.lang == "de"
       %}Termine{% else %}Dates{% endif %}</a>
-    <a label="{% if page.lang == "de" %}gehe zur Seite Shop{% else %}go to shop{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}shop{% else %}en/shop{% endif %}">{% if page.lang == "de"
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}shop{% else %}en/shop{% endif %}">{% if page.lang == "de"
       %}Shop{% else %}Shop{% endif %}</a>
-    <a label="{% if page.lang == "de" %}gehe zur Seite Kontakt{% else %}go to contact{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}kontakt{% else %}en/contact{% endif %}">{% if page.lang ==
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}kontakt{% else %}en/contact{% endif %}">{% if page.lang ==
       "de" %}Kontakt{% else %}Contact{% endif %}</a>
-    <a label="{% if page.lang == "de" %}wechsel die Sprache auf Englisch{% else %}switch to english language{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "de" %}en/{% else %}{% endif %}">
+    <a href="{{ site.baseurl }}/{% if page.lang == "de" %}en/{% else %}{% endif %}">
       <div id="language-selector-container"><img alt="{% if page.lang == "de" %}Flagge des Vereinigten Königreiches{% else %}Flag of the United Kingdom{% endif %}" id="language-selector"
           src="{{ site.baseurl }}/assets/img/{% if page.lang == "de" %}gb.svg{% else %}de.svg{% endif %}" /></div>
     </a>
@@ -97,9 +95,9 @@
     </main>
     <div class="content-flex-item" id="support-box">
       <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
-        <a label="{% if page.lang == "de" %}Unterstütze unsere künstlerische Arbeit{% else %}Support us as independent artists!{% endif %}" id="support-link" href="{{ site.baseurl }}/{% if page.lang == "de" %}support{% else %}en/support{% endif %}">
+        <a id="support-link" href="{{ site.baseurl }}/{% if page.lang == "de" %}support{% else %}en/support{% endif %}">
           <p id="support-text">{% if page.lang == "de" %}Unterstütze unsere künstlerische Arbeit{% else %}Support us as independent artists!{% endif %}</p>
-          <img id="support-image" src="{{ site.baseurl }}/assets/img/support_background.webp" />
+          <img alt="{% if page.lang == "de" %}Die Gesichter von Anka und René spiegeln sich im blauen Wasser{% else %}The faces of Anka and René are reflecting in the blue water.{% endif %}" href="{{ site.baseurl }}/{% if page.lang == "en" %}en/{% endif %}" id="support-image" src="{{ site.baseurl }}/assets/img/support_background.webp" />
         </a>
       </div>
     </div>
