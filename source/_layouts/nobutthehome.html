@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/style/socicon.min.css">
   <script src="{{ site.baseurl }}/assets/script/home.js"></script>
   {%- include metadata.html -%}
+  <!-- see also picture tag below and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" as="image" media="(max-width: 500px)" />
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" as="image" media="(max-width: 2000px)" />
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" as="image" media="(max-width: 3000px)" />
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" as="image" media="(min-width: 3001px)" />
 </head>
 
 <body>
@@ -24,6 +29,7 @@
     href="#arrows">
     <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
     <picture>
+      <!-- see also rel="preload" in header and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
       <source media="(max-width: 500px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" />
       <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" />
       <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" />

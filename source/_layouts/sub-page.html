@@ -11,16 +11,22 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/style/socicon.min.css">
   <script src="{{ site.baseurl }}/assets/script/common-sub-pages.js"></script>
   {%- include metadata.html -%}
+  <!-- see also picture tag below and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" as="image" media="(max-width: 500px)" />
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" as="image" media="(max-width: 2000px)" />
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" as="image" media="(max-width: 3000px)" />
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" as="image" media="(min-width: 3001px)" />
 </head>
 
 <body>
   <div class="header">
     <a href="{{ site.baseurl }}/" ><img class="header_logo" src="{{ site.baseurl }}/assets/img/logo.webp" /></a>
     <picture>
-      <source media="(max-width: 1000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" />
+      <!-- see also rel="preload" in header and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
+      <source media="(max-width: 500px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" />
       <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" />
       <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" />
-      <source media="(max-width: 5000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" />
+      <source media="(min-width: 3001px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" />
       <img
         alt="{% if page.lang == "de" %}Anka und René laufen am Strand und spielen auf der Geige und auf der Gitarre. Die Sonne scheint und im Hintergrund brechen weiße Wellen.{% else %}Anka and René are walking on the beach playing violin and guitar. The sun is shining and white waves are breaking in the background.{% endif %}"
         src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp"
