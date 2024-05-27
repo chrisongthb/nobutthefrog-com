@@ -1,11 +1,19 @@
-
 {% for post in site.posts %}
   {% if post.categories contains page.lang %}
-    <h2 class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="post_date">{% if page.lang == "de" %}{{ post.date | date: "%-d.%m.%Y" }}{% else %}{{ post.date | date: "%Y-%m-%-d" }}{% endif %}</p>
-    <p>{{ post.excerpt | strip_html | append: '&#8230;' }}</p>
-    {% if post.blog_list_image %}
-    <a href="{{ site.baseurl }}{{ post.url }}"><img alt="{% if page.lang == "de" %}Titelbild für Post '{{ post.title }}'{% else %}Featured image for blog post '{{ post.title }}'{% endif %}" class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }}"></a>
+    {% if page.lang == "de" %}
+      <h2 class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="post_date">{{ post.date | date: "%-d.%m.%Y" }}</p>
+      <p>{{ post.excerpt | strip_html }}<a href="{{ site.baseurl }}{{ post.url }}">&#91;weiterlesen&#93;</a></p>
+      {% if post.blog_list_image %}
+      <a href="{{ site.baseurl }}{{ post.url }}"><img alt="Titelbild von Post '{{ post.title }}'" class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }}"></a>
+      {% endif %}
+    {% else %}
+      <h2 class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="post_date">{{ post.date | date: "%Y-%m-%-d" }}</p>
+      <p>{{ post.excerpt | strip_html }}<a href="{{ site.baseurl }}{{ post.url }}">&#91;read more&#93;</a></p>
+      {% if post.blog_list_image %}
+      <a href="{{ site.baseurl }}{{ post.url }}"><img alt="Featured image of post '{{ post.title }}'" class="post_image" src="{{ site.baseurl }}/assets/img/posts/{{ post.blog_list_image }}"></a>
+      {% endif %}
     {% endif %}
   {% endif %}
 {% endfor %}
