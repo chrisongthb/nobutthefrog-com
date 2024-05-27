@@ -452,10 +452,14 @@ body {
     margin-inline: 5vw;
     margin-top: 5vh;
     width: 90%;
+    height: 4rem;
+    flex-basis: initial;
   }
 
   #support-text {
-    font-size: 1.2em;
+    margin-top: 0.5rem;
+    width: 90%;
+    font-size: 0.9rem;
   }
 
   #main-content-box {
