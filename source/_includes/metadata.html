@@ -29,47 +29,47 @@
     {% assign nbtf_url = site.development_url %}
   {% endif %}
 
-  <meta name="generator" content="Jekyll v{{ jekyll.version }}" />
-  <meta name="author" content="Nobutthefrog" />
-  <link rel="canonical" href="{{ nbtf_url }}{{ site.baseurl }}{{ page.url }}" />
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}" >
+  <meta name="author" content="Nobutthefrog" >
+  <link rel="canonical" href="{{ nbtf_url }}{{ site.baseurl }}{{ page.url }}" >
 
   <!-- Primary Meta Tags -->
   <title>Nobutthefrog - {{ page.title }}</title>
-  <meta name="title" content="Nobutthefrog - {{ page.title }}" />
+  <meta name="title" content="Nobutthefrog - {{ page.title }}" >
   {% if page.description %}
-  <meta name="description" content="{{ page.description }}" />
+  <meta name="description" content="{{ page.description }}" >
   {% endif %}
 
   <!-- Open Graph / Facebook -->
   {% if page.date %}
-  <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+  <meta property="og:type" content="article" >
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" >
   {% else %}
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" >
   {% endif %}
-  <meta property="og:locale" content="{{ page.locale }}" />
-  <meta property="og:url" content="{{ nbtf_url }}{{ site.baseurl }}{{ page.url }}" />
-  <meta property="og:title" content="Nobutthefrog - {{ page.title }}" />
-  <meta property="og:site_name" content="Nobutthefrog" />
+  <meta property="og:locale" content="{{ page.locale }}" >
+  <meta property="og:url" content="{{ nbtf_url }}{{ site.baseurl }}{{ page.url }}" >
+  <meta property="og:title" content="Nobutthefrog - {{ page.title }}" >
+  <meta property="og:site_name" content="Nobutthefrog" >
   {% if page.description %}
-  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}" >
   {% endif %}
   {% if page.blog_list_image %}
-  <meta property="og:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/posts/{{ page.blog_list_image }}" />
+  <meta property="og:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/posts/{{ page.blog_list_image }}" >
   {% else %}
-  <meta property="og:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" />
+  <meta property="og:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" >
   {% endif %}
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="{{ nbtf_url }}{{ site.baseurl }}{{ page.url }}" />
-  <meta property="twitter:title" content="Nobutthefrog - {{ page.title }}" />
+  <meta property="twitter:card" content="summary_large_image" >
+  <meta property="twitter:url" content="{{ nbtf_url }}{{ site.baseurl }}{{ page.url }}" >
+  <meta property="twitter:title" content="Nobutthefrog - {{ page.title }}" >
   {% if page.description %}
-  <meta property="twitter:description" content="{{ page.description }}" />
+  <meta property="twitter:description" content="{{ page.description }}" >
   {% endif %}
   {% if page.blog_list_image %}
-  <meta property="twitter:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/posts/{{ page.blog_list_image }}" />
+  <meta property="twitter:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/posts/{{ page.blog_list_image }}" >
   {% else %}
-  <meta property="twitter:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" />
+  <meta property="twitter:image" content="{{ nbtf_url }}{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" >
   {% endif %}
 
