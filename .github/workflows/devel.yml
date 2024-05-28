@@ -50,13 +50,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+        # see also _config.yml (development_url)
       - name: Build with Jekyll
         run: cd "source"; ls -l; bundle exec jekyll build --future --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: development
 
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'source/_site/'
