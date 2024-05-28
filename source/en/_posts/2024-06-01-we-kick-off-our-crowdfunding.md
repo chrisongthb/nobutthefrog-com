@@ -4,7 +4,7 @@ extra_include: go_back_to_blog.html
 lang: en
 
 title: "Big News! We are starting a crowdfunding for our new album!"
-date: 2024-05-22 12:00:00 +0100
+date: 2024-06-01 10:00:00 +0100
 path_to_other_lang: 'de/posts/wir-starten-unser-crowdfunding/'
 blog_list_image: 'IMG_8092_1000_70percent.webp'
 ---
