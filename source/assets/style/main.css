@@ -491,11 +491,22 @@ body {
   */
 }
 
+@media screen and (max-width: 500px) {
+  #showVideoText {
+    width: 60%;
+  }
+
+  /* jekyll uses figure to add a code block */
+  #main-content-box figure {
+    margin-inline: 0px;
+  }
+}
+
+
 /* Fix too wide code block on small screens */
 /* This is only useful, if the picture is landscape and not portrait format */
 /*
 @media screen and (max-width: 500px) {
-
   #showVideoImage {
     object-fit: scale-down;
     object-position: 50% 80%;
@@ -504,14 +515,9 @@ body {
     padding: 2rem;
     box-shadow: #333 0px 0px 1em 0.1em;
   }
-
   #showVideoText {
     color: #D7DDE2;
     margin-top: 15vh;
-  }
-
-  #main-content-box figure {
-    margin-inline: 0px;
   }
 }
 */
