@@ -22,25 +22,20 @@
 </head>
 
 <body>
-  <a href="#arrows">
-    <img alt="{% if page.lang == "de" %}Schriftzug Nobutthefrog{% else %}Lettering Nobutthefrog{% endif %}"
-      class="logo" src="{{ site.baseurl }}/assets/img/logo.webp">
-  </a>
-  <a href="#arrows">
-    <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
-    <picture>
-      <!-- see also rel="preload" in header and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
-      <source media="(max-width: 500px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp">
-      <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp">
-      <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp">
-      <source media="(min-width: 3001px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
-      <img alt="{% if page.lang == "de" %}Anka und René laufen am Strand und spielen auf der Geige und auf der Gitarre.
-        Die Sonne scheint und im Hintergrund brechen weiße Wellen.{% else %}Anka and René are walking on the beach
-        playing violin and guitar. The sun is shining and white waves are breaking in the background.{% endif %}"
-        src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" class="cover">
-    </picture>
-
-  </a>
+  <img alt="{% if page.lang == "de" %}Schriftzug Nobutthefrog{% else %}Lettering Nobutthefrog{% endif %}"
+    class="logo" src="{{ site.baseurl }}/assets/img/logo.webp">
+  <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+  <picture>
+    <!-- see also rel="preload" in header and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
+    <source media="(max-width: 500px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp">
+    <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp">
+    <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp">
+    <source media="(min-width: 3001px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
+    <img alt="{% if page.lang == "de" %}Anka und René laufen am Strand und spielen auf der Geige und auf der Gitarre.
+      Die Sonne scheint und im Hintergrund brechen weiße Wellen.{% else %}Anka and René are walking on the beach
+      playing violin and guitar. The sun is shining and white waves are breaking in the background.{% endif %}"
+      src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" class="cover">
+  </picture>
   <svg id="arrows"> <!-- https://codepen.io/postor/pen/vYpNYg -->
     <path class="a1" d="M0 0 L30 32 L60 0"></path>
     <path class="a2" d="M0 20 L30 52 L60 20"></path>
