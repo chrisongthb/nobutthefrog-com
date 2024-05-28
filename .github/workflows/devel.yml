@@ -11,6 +11,10 @@ on:
   push:
     branches: ["devel"]
 
+  # Runs regularly
+  schedule:
+    - cron: '55 * * * *'
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -51,7 +55,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
-        run: cd "source"; ls -l; bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: cd "source"; ls -l; bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }} --future"
         env:
           JEKYLL_ENV: development
 
