@@ -184,6 +184,11 @@ body {
   text-align: justify;
 }
 
+/* avoid hyphens for mail addresses */
+#main-content-box a {
+  hyphens: none;
+}
+
 #main-content-box a {
   color: #9E3E2F;
   text-decoration: none;
@@ -499,6 +504,11 @@ body {
   /* jekyll uses figure to add a code block */
   #main-content-box figure {
     margin-inline: 0px;
+  }
+
+  /* avoid long spaces between words on small screens */
+  #main-content-box p {
+    text-align: left;
   }
 }
 
