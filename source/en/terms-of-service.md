@@ -65,7 +65,9 @@ Annkathrin Slavik &amp; René Huber</p>
 E-Mail: contact@nobutthefrog.com</p>
 <h2>Editorially responsible</h2>
 <p>Musik Slavik &amp; Huber GbR</p>
+<h2>Webdesign and coding</h2>
+<p>Christian Sachs &#151; <a href="https://github.com/chrisongthb">Github</a> &#151; <a href="https://www.instagram.com/chrisonnstgrm/">Instagram</a></p>
 <h2>Consumer dispute resolution/Universal arbitration board</h2>
 <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
 <hr>
-<p>Source: <a href="https://www.e-recht24.de/impressum-generator.html">www.e-recht24.de</a> and <a href="https://www.termsofservicegenerator.net">www.termsofservicegenerator.net</a></p>
+<p>Source: <a href="https://www.termsofservicegenerator.net">www.e-recht24.de</a> and <a href="https://www.termsofservicegenerator.net">www.termsofservicegenerator.net</a></p>
