@@ -146,3 +146,45 @@
     padding-inline: 5vw;
   }
 }
+
+/* only for blog pages */
+.post_title {
+  margin-bottom: 0.3rem;
+}
+.post_date {
+  margin-top: 0rem;
+}
+.post_image {
+  height: auto;
+  width: 22rem;
+  max-width: 100%;
+}
+
+/* only for support pages */
+#support-flex-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.support-flex-item {
+  width: 100%;
+  padding-top: 2em;
+  padding-inline: 1em;
+}
+
+#support-qr-sepa, #support-qr-paypal {
+  width: 10em;
+  height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  #support-flex-container {
+    flex-direction: column;
+  }
+
+  .support-flex-item {
+    padding-top: initial;
+    padding-inline: initial;
+  }
+}

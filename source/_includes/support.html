@@ -1,33 +1,3 @@
-<style>
-#support-flex-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-#support-flex-item {
-  width: 100%;
-  padding-top: 2em;
-  padding-inline: 1em;
-}
-
-#support-qr-sepa, #support-qr-paypal {
-  width: 10em;
-  height: auto;
-}
-
-@media screen and (max-width: 1200px) {
-  #support-flex-container {
-    flex-direction: column;
-  }
-
-  #support-flex-item {
-    padding-top: initial;
-    padding-inline: initial;
-  }
-}
-</style>
-
 {% if page.lang == "de" %}
 <p>Du willst uns als freischaffende Musikerduo unterstützen und uns finanziell den Rücken freihalten? Wir freuen uns über jeden Beitrag in unserem digitalen Spendenhut:</p>
 
@@ -37,7 +7,7 @@
 
 
 <div id="support-flex-container">
-  <div id="support-flex-item">
+  <div class="support-flex-item">
     <h2>SEPA</h2>
 
     {% if page.lang == "de" %}
@@ -51,7 +21,7 @@
     </p>
     <p>Alternativ kannst du auch mit deiner Online-Banking App diesen QR-Code scannen:</p>
     <p>
-      <img id="support-qr-sepa" src="{{ site.baseurl }}/assets/img/qr-code-EPC-QR-Code-SEPA-DE.png" alt="QR-Code für SEPA Überweisung" />
+      <img id="support-qr-sepa" src="{{ site.baseurl }}/assets/img/qr-code-EPC-QR-Code-SEPA-DE.png" alt="QR-Code für SEPA Überweisung" >
     </p>
 
     {% else %}
@@ -65,26 +35,26 @@
     </p>
     <p>You may also scan this qr code with your online banking app:</p>
     <p>
-      <img id="support-qr-sepa" src="{{ site.baseurl }}/assets/img/qr-code-EPC-QR-Code-SEPA-EN.png" alt="QR-Code for support via SEPA" />
+      <img id="support-qr-sepa" src="{{ site.baseurl }}/assets/img/qr-code-EPC-QR-Code-SEPA-EN.png" alt="QR-Code for support via SEPA" >
     </p>
     {% endif %}
 
   </div>
-  <div id="support-flex-item">
+  <div class="support-flex-item">
     <h2>Paypal</h2>
 
     {% if page.lang == "de" %}
     <p>Bitte die PayPal Gebühren beachten (aus 1€ werden 63ct, aus 10€ werden 9,40€)</p>
-    <p>Hier ist der Link zu unserem PayPal Konto: <a href="https://www.paypal.com/donate/?hosted_button_id=MNMGSQP3JAPS4" target="_blank">>>KLICK<<</a></p>
+    <p>Hier ist der Link zu unserem PayPal Konto: <a href="https://www.paypal.com/donate/?hosted_button_id=MNMGSQP3JAPS4" target="_blank">&laquo;KLICK&raquo;</a></p>
     <p>Der QR-Code führt ebenfalls zu unserem PayPal Konto:</p>
-    <img id="support-qr-paypal" src="{{ site.baseurl }}/assets/img/qr-code-paypal.png" alt="QR-Code für PayPal" />
+    <img id="support-qr-paypal" src="{{ site.baseurl }}/assets/img/qr-code-paypal.png" alt="QR-Code für PayPal" >
 
     {% else %}
     <p>Please note the PayPal fees (1 € becomes 63 ct, 10 € becomes 9,40 €)</p>
-    <p>Here you can find our PayPal account: <a href="https://www.paypal.com/donate/?hosted_button_id=MNMGSQP3JAPS4" target="_blank">>>CLICK<<</a></p>
+    <p>Here you can find our PayPal account: <a href="https://www.paypal.com/donate/?hosted_button_id=MNMGSQP3JAPS4" target="_blank">&laquo;CLICK&raquo;</a></p>
     <p>You also land on our PayPal account by scanning this QR-Code:</p>
 
-    <img id="support-qr-paypal" src="{{ site.baseurl }}/assets/img/qr-code-paypal.png" alt="QR-Code für PayPal" />
+    <img id="support-qr-paypal" src="{{ site.baseurl }}/assets/img/qr-code-paypal.png" alt="QR-Code für PayPal" >
 
     {% endif %}
   </div>

@@ -1,4 +1,3 @@
-
 /* First of all, you have a @font-face ruleset at the start of the CSS, which specifies the font file(s) to download: */
 @font-face {
   font-family: "Quicksand";
@@ -15,6 +14,10 @@
 @font-face {
   font-family: "Cantarell Bold";
   src: url("../font/Cantarell-Bold.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -182,6 +185,11 @@ body {
 #main-content-box p {
   hyphens: auto;
   text-align: justify;
+}
+
+/* avoid hyphens for mail addresses */
+#main-content-box a {
+  hyphens: none;
 }
 
 #main-content-box a {
@@ -452,10 +460,14 @@ body {
     margin-inline: 5vw;
     margin-top: 5vh;
     width: 90%;
+    height: 4rem;
+    flex-basis: initial;
   }
 
   #support-text {
-    font-size: 1.2em;
+    margin-top: 0.5rem;
+    width: 90%;
+    font-size: 0.9rem;
   }
 
   #main-content-box {
@@ -463,6 +475,12 @@ body {
     margin-inline: 5vw;
     margin-top: 5vh;
     flex-basis: initial;
+    width: 80vw;
+  }
+
+  #main-content-box * {
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   #video-box {
@@ -487,11 +505,27 @@ body {
   */
 }
 
+@media screen and (max-width: 500px) {
+  #showVideoText {
+    width: 60%;
+  }
+
+  /* jekyll uses figure to add a code block */
+  #main-content-box figure {
+    margin-inline: 0px;
+  }
+
+  /* avoid long spaces between words on small screens */
+  #main-content-box p {
+    text-align: left;
+  }
+}
+
+
 /* Fix too wide code block on small screens */
 /* This is only useful, if the picture is landscape and not portrait format */
 /*
 @media screen and (max-width: 500px) {
-
   #showVideoImage {
     object-fit: scale-down;
     object-position: 50% 80%;
@@ -500,14 +534,9 @@ body {
     padding: 2rem;
     box-shadow: #333 0px 0px 1em 0.1em;
   }
-
   #showVideoText {
     color: #D7DDE2;
     margin-top: 15vh;
-  }
-
-  #main-content-box figure {
-    margin-inline: 0px;
   }
 }
 */

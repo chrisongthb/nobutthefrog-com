@@ -5,7 +5,7 @@ var player;
 function onYouTubeIframeAPIReady() {
   // https://developers.google.com/youtube/iframe_api_reference?hl=de#Loading_a_Video_Player
   player = new YT.Player('yt-video', {
-      videoId: 'xDvVn7OpXl4',
+      videoId: 'MeTZ5XEZIZk',
       events: {
         'onReady': onPlayerReady,
       }
