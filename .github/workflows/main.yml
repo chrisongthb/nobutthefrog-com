@@ -77,8 +77,8 @@ jobs:
           name: jekyll-production-site
       - shell: bash
         run: |
+          pwd
           ls -l
-          ls -lR
           tree -f
       - name: Deploy files via SFTP
         uses: pressidium/lftp-mirror-action@v1
