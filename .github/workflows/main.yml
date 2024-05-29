@@ -15,7 +15,7 @@ on:
   # for requirements regarding schedule see also
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '5 11 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
