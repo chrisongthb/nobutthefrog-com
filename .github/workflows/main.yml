@@ -107,4 +107,4 @@ jobs:
           remoteDir: '/customers/9/b/4/nobutthefrog.com/httpd.www'
           reverse: true
           ignoreFile: '.lftp_ignore'
-          options: '--verbose'
+          options: '--verbose --delete'
