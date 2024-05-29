@@ -475,6 +475,12 @@ body {
     margin-inline: 5vw;
     margin-top: 5vh;
     flex-basis: initial;
+    width: 80vw;
+  }
+
+  #main-content-box * {
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   #video-box {
