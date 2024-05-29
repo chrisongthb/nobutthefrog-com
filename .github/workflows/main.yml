@@ -80,6 +80,10 @@ jobs:
           pwd
           ls -l
           tree -f
+          echo "secrets.SFTP_HOST - ${{ secrets.SFTP_HOST }}"
+          echo "secrets.SFTP_PORT - ${{ secrets.SFTP_PORT }}"
+          echo "secrets.SFTP_USER - ${{ secrets.SFTP_USER }}"
+          echo "secrets.SFTP_PASS - ${{ secrets.SFTP_PASS }}"
       - name: Deploy files via SFTP
         uses: pressidium/lftp-mirror-action@v1
         with:
