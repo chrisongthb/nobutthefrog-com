@@ -84,16 +84,15 @@ jobs:
         uses: pressidium/lftp-mirror-action@v1
         with:
           # SFTP credentials
-          host: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
-          user: ${{ secrets.SFTP_USER }}
-          pass: ${{ secrets.SFTP_PASS }}
+          INPUT_HOST: ${{ secrets.SFTP_HOST }}
+          INPUT_PORT: ${{ secrets.SFTP_PORT }}
+          INPUT_USER: ${{ secrets.SFTP_USER }}
+          INPUT_PASS: ${{ secrets.SFTP_PASS }}
           # lftp settings
-          onlyNewer: true
-          settings: 'sftp:auto-confirm=yes'
+          INPUT_ONLYNEWER: true
+          INPUT_SETTINGS: 'sftp:auto-confirm=yes'
           # Mirror command options
-          localDir: '.'
-          remoteDir: '/customers/9/b/4/nobutthefrog.com/httpd.www'
-          reverse: true
-          ignoreFile: '.lftp_ignore'
-          options: '--verbose'
+          INPUT_LOCALDIR: '.'
+          INPUT_REMOTEDIR: '/customers/9/b/4/nobutthefrog.com/httpd.www'
+          INPUT_REVERSE: true
+          INPUT_OPTIONS: '--verbose'
