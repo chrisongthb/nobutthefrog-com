@@ -1,2 +1,4 @@
 RewriteEngine on
 ErrorDocument 404 /404.html
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
