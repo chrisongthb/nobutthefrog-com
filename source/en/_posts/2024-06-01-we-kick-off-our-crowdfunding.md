@@ -10,7 +10,7 @@ blog_list_image: 'IMG_8092_1000_70percent.webp'
 ---
 ![Anka und René playing their music on the beach, while waves are roaring in the background ](../../../assets/img/posts/IMG_8092_1000_70percent.webp "Featured Blog Post Foto")
 
-From June 1 to July 31, 2024, we are collecting money via the “Startnext” platform for our new album “Right where you are”<!--more-->. We already have the masters of 8 songs, which we recorded last year on a few hot summer days in Anka's grandmother's barn on the edge of Franconian Switzerland. Stop by and support us with a donation!
+From June 06 to August 05, 2024, we are collecting money via the “Startnext” platform for our new album “Right where you are”<!--more-->. We already have the masters of 8 songs, which we recorded last year on a few hot summer days in Anka's grandmother's barn on the edge of Franconian Switzerland. Stop by and support us with a donation!
 
 There will be the legendary apple pie & a visit from us again, plus of course the album for pre-order and much more!
 
