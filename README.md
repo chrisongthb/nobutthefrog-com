@@ -1,9 +1,9 @@
-# pages-test
+# nobutthefrog-com
+
+Jekyll powered static Website hosted on https://nobutthefrog.com
 
 ## Rechtliches
-* Impressum
-* Datenschutz
-  * https://www.datenschutz.org/technisch-notwendige-cookies/
+[Technisch notwendige Cookies, die allein für die Funktionen und den Betrieb einer Webseite erforderlich sind, bedürfen keiner Einwilligung des Nutzers.](https://www.datenschutz.org/technisch-notwendige-cookies/)
 
 ## Farben
 * Theorie: https://www.freecodecamp.org/news/comprehensive-guide-for-color-usage-in-web-design-e2a9afce09fb/
@@ -13,7 +13,8 @@
   * Story book, z.B. https://primer.style/primitives/storybook/?path=/story/typography-functional--overview&globals=theme:light
 
 
-### Farbpalette
+### Farbpalette erzeugen lassen
+Wird aktuell nicht verwendet, kann man sich aber erzeugen lassen mit:
 * gpick
   * scheme generation
   * Hue 100
@@ -27,9 +28,6 @@
 * #89DCA6
 * #DC9489
 
-## Fonts
-* evtl diese hier? https://fonts.google.com/specimen/Reem+Kufi+Fun/about?preview.text=Aktuelles&stroke=Sans+Serif&subset=arabic&stylecount=3&noto.script=Arab
-
 
 ## Größe von Bildern
 * nicht jpg verwenden, sondern .webp Format siehe auch https://developers.google.com/speed/webp?hl=de
@@ -40,19 +38,7 @@
   * [ ] Safe Exif data
   * [ ] Safe XMP data
   * [x] Safe color profile
-
-
-## im Hinterkopf
-* Unterstützen rechts 
-* Shop ist bandcamp
-* Mehrsprachig: Einfach alles doppelt anlegen (so ändert sich dann auch die URL) (ähnlich wie bei blackseadahu)
-* Ultrabreite bildschirme: maxwidth oder so?!
-* Barrierefreiheit (Farben siehe Theorie Link oben), Alternativtexte Bilder
-* Kommentare mit staticman.net weil für giscus.app/de braucht man github account
-* Test-Page: Github organization kann keine Pages kostenlos. Stattdessen einfach selbst 'ne VM hosten!
-* Layout an Albumart anpassen?
-* Bus als Mauszeiger?
-* Bus fährt um den Bildschirmrand?
+* höhere Auflösung und geringere Qualität ist kleiner wie kleine Auflösung und hohe Qualität
 
 ## Weitere Links
 * https://www.hanneswittmer.de/
