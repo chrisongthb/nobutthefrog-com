@@ -2,6 +2,7 @@
 
 # TODO: use https://cli.github.com/
 # TODO: use brew also on linux
+# TODO: https://scriptingosx.com/2018/08/user-interaction-from-bash-scripts/
 
 set -e
 
