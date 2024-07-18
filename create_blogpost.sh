@@ -276,7 +276,7 @@ git_push_files_and_create_pr() {
   git add "${blogpost_file_de}" "${blogpost_file_en}" "${output_image}"
   git commit -m "Create post '${post_title_en}'"
   git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"
-  gh pr create --title "Create post '${post_title_en}'" --body "See also\n* https://chrisongthb.github.io/nobutthefrog-com/blog/\n* https://chrisongthb.github.io/nobutthefrog-com/en/blog/\n You may have to reload the pages by Option+Command+R (Strg+F5)"
+  gh pr create --title "Create post '${post_title_en}'" --body "See also https://chrisongthb.github.io/nobutthefrog-com/blog/ or https://chrisongthb.github.io/nobutthefrog-com/en/blog/ - You may have to reload the pages by Option+Command+R (Strg+F5)"
 }
 
 #
