@@ -33,7 +33,7 @@ development_url: "https://chrisongthb.github.io" # see metadata.html
 excerpt_separator: '<!--more-->'
 
 # shorten blogpost links
-permalink: :categories/posts/:title/
+permalink: :categories/posts/:year-:month-:day-:title/
 
 # Build settings
 plugins:
