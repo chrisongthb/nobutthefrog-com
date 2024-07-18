@@ -5,7 +5,7 @@ lang: en
 
 title: "Big News! We are starting a crowdfunding for our new album!"
 date: 2024-06-01 09:00:00 +0100
-path_to_other_lang: 'de/posts/wir-starten-unser-crowdfunding/'
+path_to_other_lang: 'de/posts/2024-06-01-wir-starten-unser-crowdfunding/'
 blog_list_image: 'IMG_8092_1000_70percent.webp'
 ---
 ![Anka und René playing their music on the beach, while waves are roaring in the background ](../../../assets/img/posts/IMG_8092_1000_70percent.webp "Featured Blog Post Foto")
