@@ -106,8 +106,8 @@ select_featured_blog_post_photo_Linux() {
 }
 select_featured_blog_post_photo_Darwin() {
   # TODO: how to select file: https://apple.stackexchange.com/q/328557
-  osascript -e "display notification 'Bitte auf OK klicken und im nächsten Fenster das Foto auswählen, das für den Blogpost verwendet werden soll.' with title "Heyho!""
-  input_image="$(osascript -e "set directory to posix path of (choose file with prompt "Wähle Datei" default location (path to desktop))")"
+  osascript -e "display dialog \"Bitte auf OK klicken und im nächsten Fenster das Foto auswählen, das für den Blogpost verwendet werden soll.\" with title \"Heyho!\""
+  input_image="$(osascript -e "set directory to posix path of (choose file with prompt \"Wähle Datei\" default location (path to desktop))")"
 }
 
 #
@@ -152,8 +152,8 @@ describe_featured_blog_post_photo_Linux() {
   post_photo_description_en="${REPLY}"
 }
 describe_featured_blog_post_photo_Darwin() {
-  post_photo_description_de="$(osascript -e "text returned of (display dialog 'Beschreibe das Bild für den Blogpost auf Deutsch' with title 'Bildbeschreibung Deutsch' default answer '')")"
-  post_photo_description_en="$(osascript -e "text returned of (display dialog 'Beschreibe das Bild für den Blogpost auf Englisch' with title 'Bildbeschreibung Englisch' default answer '')")"
+  post_photo_description_de="$(osascript -e "text returned of (display dialog \"Beschreibe das Bild für den Blogpost auf Deutsch\" with title \"Bildbeschreibung Deutsch\" default answer \"\")")"
+  post_photo_description_en="$(osascript -e "text returned of (display dialog \"Beschreibe das Bild für den Blogpost auf Englisch\" with title \"Bildbeschreibung Englisch\" default answer \"\")")"
 }
 
 
@@ -174,11 +174,11 @@ select_date_of_blogpost_Linux() {
 }
 select_date_of_blogpost_Darwin() {
   while true; do
-    REPLY="$(osascript -e "text returned of (display dialog 'Gebe das Datum der Veröffentlichung im Format JJJJ-MM-TT ein' with title 'Veröffentlichungsdatum' default answer '')")"
+    REPLY="$(osascript -e "text returned of (display dialog \"Gebe das Datum der Veröffentlichung im Format JJJJ-MM-TT ein\" with title \"Veröffentlichungsdatum\" default answer \"\")")"
     if date --date="${REPLY} 09:00:00 +0100" >/dev/null 2>&1 && wc -m <<< "${REPLY}" >/dev/null 2>&1; then
       break
     else
-      osascript -e "display notification 'Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.' with title "Tippfehler?""
+      osascript -e "display notification \"Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.\" with title "Tippfehler?""
     fi
   done
   post_date="${REPLY} 09:00:00 +0100"
@@ -213,22 +213,22 @@ select_title_of_blogpost_Linux() {
 }
 select_title_of_blogpost_Darwin() {
   while true; do
-    REPLY="$(osascript -e "text returned of (display dialog 'Gebe den Blogpost Titel auf Deutsch ein' with title 'Blogpost Titel Deutsch' default answer '')")"
+    REPLY="$(osascript -e "text returned of (display dialog \"Gebe den Blogpost Titel auf Deutsch ein\" with title \"Blogpost Titel Deutsch\" default answer \"\")")"
     if [ "${REPLY}" != '' ]; then
       break
     else
-      osascript -e "display notification 'Der Titel ist leer - Bitte nocheinmal versuchen.' with title "Nocheinmal bitte""
+      osascript -e "display notification \"Der Titel ist leer - Bitte nocheinmal versuchen.\" with title "Nocheinmal bitte""
     fi
   done
   post_title_de="${REPLY}"
   post_title_de_url="${REPLY// /-}"
 
   while true; do
-    REPLY="$(osascript -e "text returned of (display dialog 'Gebe den Blogpost Titel auf Engilsch ein' with title 'Blogpost Titel Englisch' default answer '')")"
+    REPLY="$(osascript -e "text returned of (display dialog \"Gebe den Blogpost Titel auf Engilsch ein\" with title \"Blogpost Titel Englisch\" default answer \"\")")"
     if [ "${REPLY}" != '' ]; then
       break
     else
-      osascript -e "display notification 'Der Titel ist leer - Bitte nocheinmal versuchen.' with title "Nocheinmal bitte""
+      osascript -e "display notification \"Der Titel ist leer - Bitte nocheinmal versuchen.\" with title \"Nocheinmal bitte\""
     fi
   done
   post_title_en="${REPLY}"
