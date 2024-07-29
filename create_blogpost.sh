@@ -175,7 +175,7 @@ select_date_of_blogpost_Linux() {
 select_date_of_blogpost_Darwin() {
   while true; do
     REPLY="$(osascript -e "text returned of (display dialog \"Gebe das Datum der Veröffentlichung im Format JJJJ-MM-TT ein\" with title \"Veröffentlichungsdatum\" default answer \"\")")"
-    if date --date="${REPLY} 09:00:00 +0100" >/dev/null 2>&1 && wc -m <<< "${REPLY}" >/dev/null 2>&1; then
+    if date -jf "%Y-%m-%d %H:%M:%S %z" "${REPLY} 09:00:00 +0100" >/dev/null 2>&1 && wc -m <<< "${REPLY}" >/dev/null 2>&1; then
       break
     else
       osascript -e "display notification \"Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.\" with title \"Tippfehler?\""
