@@ -77,11 +77,11 @@ check_softwares_Darwin() {
 prepare_git_dir() {
   # prepare git development branch - the safe way ;)
   git checkout main
-  git pull
+  git pull --ff-only
   git remote prune origin
-  git pull
+  git pull --ff-only
   git reset --hard HEAD
-  git pull
+  git pull --ff-only
   git checkout main
   git checkout devel || git checkout -b devel
   git merge main
@@ -106,8 +106,8 @@ select_featured_blog_post_photo_Linux() {
 }
 select_featured_blog_post_photo_Darwin() {
   # TODO: how to select file: https://apple.stackexchange.com/q/328557
-  osascript -e "display notification 'Bitte auf OK klicken und im nächsten Fenster das Foto auswählen, das für den Blogpost verwendet werden soll.' with title "Heyho!""
-  input_image="$(osascript -e "set directory to posix path of (choose file with prompt "Wähle Datei" default location (path to desktop))")"
+  osascript -e "display dialog \"Bitte auf OK klicken und im nächsten Fenster das Foto auswählen, das für den Blogpost verwendet werden soll.\" with title \"Heyho!\""
+  input_image="$(osascript -e "set directory to posix path of (choose file with prompt \"Wähle Datei\" default location (path to desktop))")"
 }
 
 #
@@ -152,8 +152,8 @@ describe_featured_blog_post_photo_Linux() {
   post_photo_description_en="${REPLY}"
 }
 describe_featured_blog_post_photo_Darwin() {
-  post_photo_description_de="$(osascript -e "text returned of (display dialog 'Beschreibe das Bild für den Blogpost auf Deutsch' with title 'Bildbeschreibung Deutsch' default answer '')")"
-  post_photo_description_en="$(osascript -e "text returned of (display dialog 'Beschreibe das Bild für den Blogpost auf Englisch' with title 'Bildbeschreibung Englisch' default answer '')")"
+  post_photo_description_de="$(osascript -e "text returned of (display dialog \"Beschreibe das Bild für den Blogpost auf Deutsch\" with title \"Bildbeschreibung Deutsch\" default answer \"\")")"
+  post_photo_description_en="$(osascript -e "text returned of (display dialog \"Beschreibe das Bild für den Blogpost auf Englisch\" with title \"Bildbeschreibung Englisch\" default answer \"\")")"
 }
 
 
@@ -174,11 +174,11 @@ select_date_of_blogpost_Linux() {
 }
 select_date_of_blogpost_Darwin() {
   while true; do
-    REPLY="$(osascript -e "text returned of (display dialog 'Gebe das Datum der Veröffentlichung im Format JJJJ-MM-TT ein' with title 'Veröffentlichungsdatum' default answer '')")"
-    if date --date="${REPLY} 09:00:00 +0100" >/dev/null 2>&1 && wc -m <<< "${REPLY}" >/dev/null 2>&1; then
+    REPLY="$(osascript -e "text returned of (display dialog \"Gebe das Datum der Veröffentlichung im Format JJJJ-MM-TT ein\" with title \"Veröffentlichungsdatum\" default answer \"\")")"
+    if date -jf "%Y-%m-%d %H:%M:%S %z" "${REPLY} 09:00:00 +0100" >/dev/null 2>&1 && wc -m <<< "${REPLY}" >/dev/null 2>&1; then
       break
     else
-      osascript -e "display notification 'Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.' with title "Tippfehler?""
+      osascript -e "display notification \"Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.\" with title \"Tippfehler?\""
     fi
   done
   post_date="${REPLY} 09:00:00 +0100"
@@ -213,22 +213,22 @@ select_title_of_blogpost_Linux() {
 }
 select_title_of_blogpost_Darwin() {
   while true; do
-    REPLY="$(osascript -e "text returned of (display dialog 'Gebe den Blogpost Titel auf Deutsch ein' with title 'Blogpost Titel Deutsch' default answer '')")"
+    REPLY="$(osascript -e "text returned of (display dialog \"Gebe den Blogpost Titel auf Deutsch ein\" with title \"Blogpost Titel Deutsch\" default answer \"\")")"
     if [ "${REPLY}" != '' ]; then
       break
     else
-      osascript -e "display notification 'Der Titel ist leer - Bitte nocheinmal versuchen.' with title "Nocheinmal bitte""
+      osascript -e "display notification \"Der Titel ist leer - Bitte nocheinmal versuchen.\" with title "Nocheinmal bitte""
     fi
   done
   post_title_de="${REPLY}"
   post_title_de_url="${REPLY// /-}"
 
   while true; do
-    REPLY="$(osascript -e "text returned of (display dialog 'Gebe den Blogpost Titel auf Engilsch ein' with title 'Blogpost Titel Englisch' default answer '')")"
+    REPLY="$(osascript -e "text returned of (display dialog \"Gebe den Blogpost Titel auf Engilsch ein\" with title \"Blogpost Titel Englisch\" default answer \"\")")"
     if [ "${REPLY}" != '' ]; then
       break
     else
-      osascript -e "display notification 'Der Titel ist leer - Bitte nocheinmal versuchen.' with title "Nocheinmal bitte""
+      osascript -e "display notification \"Der Titel ist leer - Bitte nocheinmal versuchen.\" with title \"Nocheinmal bitte\""
     fi
   done
   post_title_en="${REPLY}"
@@ -278,18 +278,18 @@ EOF
 ---
 layout: 'sub-page'
 extra_include: 'go_back_to_blog.html'
-lang: 'de'
+lang: 'en'
 
 title: '${post_title_en}'
 date: '${post_date}'
-path_to_other_lang: 'en/posts/${post_date_short}-${post_title_de_url}/'
+path_to_other_lang: 'posts/${post_date_short}-${post_title_de_url}/'
 blog_list_image: '${output_image_basename}'
 ---
 ![${post_photo_description_en}](../../../assets/img/posts/${output_image_basename} "Featured Blog Post Foto")
 
-Hier bitte den Blogpost Text ersetzen. Alles vor dem<!--more--> erscheint in der Blogpost Übersicht, alles danach nicht mehr.
+Please replace this text here. Everything before that<!--more--> will be visible in the blog post list as preview. Every words after are only visible by viewing the whole post.
 
-Links werden folgendermaßen formatiert: [Angezeigter Text (KLICK MICH)](https://www.startnext.com/nbtf-right-where-you-are){:target="_blank"}
+Here is how to put links: [This text gets displayed as inline-text (CLICK)](https://www.startnext.com/nbtf-right-where-you-are){:target="_blank"}
 
 EOF
   fi
@@ -324,9 +324,6 @@ prepare_git_dir
 # ask for Featured Blog Post photo
 "select_featured_blog_post_photo_${OS}"
 
-# convert it
-convert_to_webp
-
 # ask for description
 "describe_featured_blog_post_photo_${OS}"
 
@@ -335,6 +332,9 @@ convert_to_webp
 
 # select title for blogpost
 "select_title_of_blogpost_${OS}"
+
+# convert it
+convert_to_webp
 
 # create blog post files
 create_blog_post_files
