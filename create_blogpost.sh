@@ -9,8 +9,10 @@
 #   * gh (by brew)
 #   * interactive parts on macos: applescript / display dialog
 #
-
-# TODO: https://scriptingosx.com/2018/08/user-interaction-from-bash-scripts/
+#
+# for how to use open apple script see
+# https://scriptingosx.com/2018/08/user-interaction-from-bash-scripts/
+#
 
 set -euo pipefail
 
@@ -105,7 +107,7 @@ select_featured_blog_post_photo_Linux() {
   done
 }
 select_featured_blog_post_photo_Darwin() {
-  # TODO: how to select file: https://apple.stackexchange.com/q/328557
+  # how to select file: https://apple.stackexchange.com/q/328557
   osascript -e "display dialog \"Bitte auf OK klicken und im nächsten Fenster das Foto auswählen, das für den Blogpost verwendet werden soll.\" with title \"Heyho!\""
   input_image="$(osascript -e "set directory to posix path of (choose file with prompt \"Wähle Datei\" default location (path to desktop))")"
 }
@@ -131,7 +133,6 @@ convert_to_webp() {
 # describe_featured_blog_post_photo_de
 #
 describe_featured_blog_post_photo_Linux() {
-  # TODO: too much ( xdg-open "${output_image}" ) >/dev/null 2>&1 || true
   while true; do
     read -rp 'Describe the blog post image in German: '
     if [ "$(wc -w <<< "${REPLY}")" -ge 3 ]; then
