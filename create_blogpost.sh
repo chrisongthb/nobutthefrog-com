@@ -178,7 +178,7 @@ select_date_of_blogpost_Darwin() {
     if date --date="${REPLY} 09:00:00 +0100" >/dev/null 2>&1 && wc -m <<< "${REPLY}" >/dev/null 2>&1; then
       break
     else
-      osascript -e "display notification \"Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.\" with title "Tippfehler?""
+      osascript -e "display notification \"Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.\" with title \"Tippfehler?\""
     fi
   done
   post_date="${REPLY} 09:00:00 +0100"
