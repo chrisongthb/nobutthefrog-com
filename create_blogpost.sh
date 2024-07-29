@@ -283,7 +283,7 @@ lang: 'en'
 
 title: '${post_title_en}'
 date: '${post_date}'
-path_to_other_lang: 'posts/${post_date_short}-${post_title_de_url}/'
+path_to_other_lang: 'de/posts/${post_date_short}-${post_title_de_url}/'
 blog_list_image: '${output_image_basename}'
 ---
 ![${post_photo_description_en}](../../../assets/img/posts/${output_image_basename} "Featured Blog Post Foto")
