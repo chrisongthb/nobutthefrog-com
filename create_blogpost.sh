@@ -106,8 +106,8 @@ select_featured_blog_post_photo_Linux() {
 }
 select_featured_blog_post_photo_Darwin() {
   # TODO: how to select file: https://apple.stackexchange.com/q/328557
-  echo todo
-  abort
+  osascript -e "display notification 'Bitte auf OK klicken und im nächsten Fenster das Foto auswählen, das für den Blogpost verwendet werden soll.' with title "Heyho!""
+  input_image="$(osascript -e "set directory to posix path of (choose file with prompt "Wähle Datei" default location (path to desktop))")"
 }
 
 #
@@ -152,9 +152,8 @@ describe_featured_blog_post_photo_Linux() {
   post_photo_description_en="${REPLY}"
 }
 describe_featured_blog_post_photo_Darwin() {
-  # TODO: xdg-open "${git_repo_base_patch}/source/assets/img/posts/${input_image}_1000_70percent.webp" 2>/den/null
-  # TODO: dialog --keep-tite --inputbox 'Describe the featured blog post (German)' 0 0 2> "$tmp_fl"
-  abort todo
+  post_photo_description_de="$(osascript -e "text returned of (display dialog 'Beschreibe das Bild für den Blogpost auf Deutsch' with title 'Bildbeschreibung Deutsch' default answer '')")"
+  post_photo_description_en="$(osascript -e "text returned of (display dialog 'Beschreibe das Bild für den Blogpost auf Englisch' with title 'Bildbeschreibung Englisch' default answer '')")"
 }
 
 
@@ -174,8 +173,16 @@ select_date_of_blogpost_Linux() {
   post_date_short="${REPLY}"
 }
 select_date_of_blogpost_Darwin() {
-  # TODO: dialog --keep-tite --date-format '%Y-%m-%d 09:00:00 +0100' --calendar 'pick release date' 0 0 2> "$tmp_fl"
-  abort todo
+  while true; do
+    REPLY="$(osascript -e "text returned of (display dialog 'Gebe das Datum der Veröffentlichung im Format JJJJ-MM-TT ein' with title 'Veröffentlichungsdatum' default answer '')")"
+    if date --date="${REPLY} 09:00:00 +0100" >/dev/null 2>&1 && wc -m <<< "${REPLY}" >/dev/null 2>&1; then
+      break
+    else
+      osascript -e "display notification 'Das Datum '${REPLY}' ist ungültig. Bitte nocheinmal versuchen.' with title "Tippfehler?""
+    fi
+  done
+  post_date="${REPLY} 09:00:00 +0100"
+  post_date_short="${REPLY}"
 }
 
 #
@@ -205,8 +212,27 @@ select_title_of_blogpost_Linux() {
   post_title_en_url="${REPLY// /-}"
 }
 select_title_of_blogpost_Darwin() {
-  # TODO:
-  abort todo
+  while true; do
+    REPLY="$(osascript -e "text returned of (display dialog 'Gebe den Blogpost Titel auf Deutsch ein' with title 'Blogpost Titel Deutsch' default answer '')")"
+    if [ "${REPLY}" != '' ]; then
+      break
+    else
+      osascript -e "display notification 'Der Titel ist leer - Bitte nocheinmal versuchen.' with title "Nocheinmal bitte""
+    fi
+  done
+  post_title_de="${REPLY}"
+  post_title_de_url="${REPLY// /-}"
+
+  while true; do
+    REPLY="$(osascript -e "text returned of (display dialog 'Gebe den Blogpost Titel auf Engilsch ein' with title 'Blogpost Titel Englisch' default answer '')")"
+    if [ "${REPLY}" != '' ]; then
+      break
+    else
+      osascript -e "display notification 'Der Titel ist leer - Bitte nocheinmal versuchen.' with title "Nocheinmal bitte""
+    fi
+  done
+  post_title_en="${REPLY}"
+  post_title_en_url="${REPLY// /-}"
 }
 
 #
