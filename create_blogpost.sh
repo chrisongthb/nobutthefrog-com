@@ -84,9 +84,9 @@ prepare_git_dir() {
   git pull --ff-only
   git reset --hard HEAD
   git pull --ff-only
+  git branch -D devel || true
   git checkout main
-  git checkout devel || git checkout -b devel
-  git merge main
+  git checkout -b devel
 
   # store absolute path
   git_repo_base_patch="$(git rev-parse --show-toplevel)"
