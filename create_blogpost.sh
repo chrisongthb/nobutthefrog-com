@@ -77,11 +77,11 @@ check_softwares_Darwin() {
 prepare_git_dir() {
   # prepare git development branch - the safe way ;)
   git checkout main
-  git pull
+  git pull --ff-only
   git remote prune origin
-  git pull
+  git pull --ff-only
   git reset --hard HEAD
-  git pull
+  git pull --ff-only
   git checkout main
   git checkout devel || git checkout -b devel
   git merge main
