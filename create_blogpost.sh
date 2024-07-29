@@ -199,7 +199,7 @@ select_title_of_blogpost_Linux() {
     fi
   done
   post_title_de="${REPLY}"
-  post_title_de_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | sed 's/ $//' | tr -s ' ' | sed 's/ /-/g')"
+  post_title_de_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | tr -s ' ' | sed 's/ $//' | sed 's/ /-/g')"
 
   while true; do
     read -rp 'Enter the blog post title in English: '
@@ -210,7 +210,7 @@ select_title_of_blogpost_Linux() {
     fi
   done
   post_title_en="${REPLY}"
-  post_title_en_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | sed 's/ $//' | tr -s ' ' | sed 's/ /-/g')"
+  post_title_en_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | tr -s ' ' | sed 's/ $//' | sed 's/ /-/g')"
 }
 select_title_of_blogpost_Darwin() {
   while true; do
@@ -222,7 +222,7 @@ select_title_of_blogpost_Darwin() {
     fi
   done
   post_title_de="${REPLY}"
-  post_title_de_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | sed 's/ $//' | tr -s ' ' | sed 's/ /-/g')"
+  post_title_de_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | tr -s ' ' | sed 's/ $//' | sed 's/ /-/g')"
 
   while true; do
     REPLY="$(osascript -e "text returned of (display dialog \"Gebe den Blogpost Titel auf Engilsch ein\" with title \"Blogpost Titel Englisch\" default answer \"\")")"
@@ -233,7 +233,7 @@ select_title_of_blogpost_Darwin() {
     fi
   done
   post_title_en="${REPLY}"
-  post_title_en_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | sed 's/ $//' | tr -s ' ' | sed 's/ /-/g')"
+  post_title_en_url="$(echo -n "${REPLY}" | tr -cd '[:alnum:] ' | tr -s ' ' | sed 's/ $//' | sed 's/ /-/g')"
 }
 
 #
