@@ -278,18 +278,18 @@ EOF
 ---
 layout: 'sub-page'
 extra_include: 'go_back_to_blog.html'
-lang: 'de'
+lang: 'en'
 
 title: '${post_title_en}'
 date: '${post_date}'
-path_to_other_lang: 'en/posts/${post_date_short}-${post_title_de_url}/'
+path_to_other_lang: 'posts/${post_date_short}-${post_title_de_url}/'
 blog_list_image: '${output_image_basename}'
 ---
 ![${post_photo_description_en}](../../../assets/img/posts/${output_image_basename} "Featured Blog Post Foto")
 
-Hier bitte den Blogpost Text ersetzen. Alles vor dem<!--more--> erscheint in der Blogpost Übersicht, alles danach nicht mehr.
+Please replace this text here. Everything before that<!--more--> will be visible in the blog post list as preview. Every words after are only visible by viewing the whole post.
 
-Links werden folgendermaßen formatiert: [Angezeigter Text (KLICK MICH)](https://www.startnext.com/nbtf-right-where-you-are){:target="_blank"}
+Here is how to put links: [This text gets displayed as inline-text (CLICK)](https://www.startnext.com/nbtf-right-where-you-are){:target="_blank"}
 
 EOF
   fi
