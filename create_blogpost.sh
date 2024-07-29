@@ -324,9 +324,6 @@ prepare_git_dir
 # ask for Featured Blog Post photo
 "select_featured_blog_post_photo_${OS}"
 
-# convert it
-convert_to_webp
-
 # ask for description
 "describe_featured_blog_post_photo_${OS}"
 
@@ -335,6 +332,9 @@ convert_to_webp
 
 # select title for blogpost
 "select_title_of_blogpost_${OS}"
+
+# convert it
+convert_to_webp
 
 # create blog post files
 create_blog_post_files
