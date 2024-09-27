@@ -63,7 +63,7 @@
           else %}German Flag{% endif %}" id="language-selector"
           src="{{ site.baseurl }}/assets/img/{% if page.lang == "de" %}gb.svg{% else %}de.svg{% endif %}"></div>
     </a>
-    <a href="javascript:void(0);" id="menu-icon">
+    <a title="{% if page.lang == "de" %}Zeige/verstecke das Menü{% else %}show/hide menu{% endif %}" href="javascript:void(0);" id="menu-icon">
       <div id="menu-icon-bars-container">
         <div class="menu-icon-bar-1"></div>
         <div class="menu-icon-bar-2"></div>
