@@ -116,8 +116,8 @@ body {
 }
 
 .topnav a.active {
-  background-color: #DC9489;
-  color: white;
+  background-color: #F1A99C;
+  font-weight: bolder;
 }
 
 .topnav #menu-icon {
