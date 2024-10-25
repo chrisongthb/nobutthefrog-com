@@ -6,9 +6,9 @@ lang: 'de'
 title: 'Hallo „About friendship“!'
 date: '2024-10-26 09:00:00 +0100'
 path_to_other_lang: 'en/posts/2024-10-26-Hello-About-friendship/'
-blog_list_image: '24-10-26 12-51-12 5953.jpg_1000_70percent.webp'
+blog_list_image: '24-10-26 09-51-12 5953.jpg_1000_70percent.webp'
 ---
-![Zwei Menschen schwimmen im Meer. Im Hintergrund sind Berge in der Abenddämmerung zu sehen](../../../assets/img/posts/24-10-26 12-51-12 5953.jpg_1000_70percent.webp "Featured Blog Post Foto")
+![Zwei Menschen schwimmen im Meer. Im Hintergrund sind Berge in der Abenddämmerung zu sehen](../../../assets/img/posts/24-10-26 09-51-12 5953.jpg_1000_70percent.webp "Featured Blog Post Foto")
 
 Ein Song über Freundschaft, der dritte Vorbote des kommenden Albums „Right where you are“.<!--more-->
 
