@@ -16,5 +16,5 @@ As we always spend several months travelling in winter, we don't see our friends
 
 Some great people have even visited us on our travels, which made us almost burst with joy. It's just great to share beautiful (and not so beautiful) moments with the people who mean a lot to you. So, a chapeau to our friends! It's great that you exist :))
 
-[Here you can find "About Friendship" on Spotify](https://open.spotify.com/intl-de/album/0RQfjYh286ddfEpXeLRQ3x){:target="_blank"}
 
+Hear "About Friendship" on [Spotify]https://open.spotify.com/intl-de/album/0RQfjYh286ddfEpXeLRQ3x){:target="_blank"} or watch a live session on [YouTube](https://youtu.be/HiaFRk8C5zM?feature=shared){:target="_blank"}.
