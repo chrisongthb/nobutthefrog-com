@@ -17,4 +17,4 @@ Da wir im Winter immer mehrere Monate verreisen, sehen wir über lange Zeit unse
 Einige tolle Menschen haben uns sogar schon auf unseren Reisen besucht, was uns vor Freude fast platzen hat lassen. Es ist einfach toll, schöne (und auch weniger schöne) Momente mit den Menschen zu teilen, die einem viel bedeuten. Also, ein chapeau an unsere FreundInnen! Schön, dass es euch gibt :))
 
 
-"About Friendship" findest du auf [Spotify]https://open.spotify.com/intl-de/album/0RQfjYh286ddfEpXeLRQ3x){:target="_blank"} oder als Live Session auf [YouTube](https://youtu.be/HiaFRk8C5zM?feature=shared){:target="_blank"}.
+"About Friendship" findest du auf [Spotify](https://open.spotify.com/intl-de/album/0RQfjYh286ddfEpXeLRQ3x){:target="_blank"} oder als Live Session auf [YouTube](https://youtu.be/HiaFRk8C5zM?feature=shared){:target="_blank"}.
