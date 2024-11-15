@@ -90,6 +90,7 @@ prepare_git_dir() {
   git checkout -b devel
   if [ "$(gh pr list -H devel -B main --json url --jq ".[0].url" | wc -w)" -ge 1 ]; then
     gh pr view -w
+    exit 0
   fi
 
   # store absolute path
