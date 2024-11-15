@@ -88,6 +88,10 @@ prepare_git_dir() {
   git branch -D devel || true
   git checkout main
   git checkout -b devel
+  if [ "$(gh pr list -H devel -B main --json url --jq ".[0].url" | wc -w)" -ge 1 ]; then
+    gh pr view -w
+    exit 0
+  fi
 
   # store absolute path
   git_repo_base_patch="$(git rev-parse --show-toplevel)"
@@ -345,5 +349,4 @@ create_blog_post_files
 git_push_files_and_create_pr
 
 # open it in web browser
-read -rp 'Edit the blog posts by via the pull request. Press ENTER to open the pull requests...'
-gh pr list -w
+gh pr view -w
