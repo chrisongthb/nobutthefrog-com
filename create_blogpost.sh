@@ -78,6 +78,7 @@ check_softwares_Darwin() {
 #
 prepare_git_dir() {
   # prepare git development branch - the safe way ;)
+  cd "$(dirname $0)"
   git checkout main
   git pull --ff-only
   git remote prune origin
