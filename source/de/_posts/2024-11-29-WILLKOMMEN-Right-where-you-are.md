@@ -16,22 +16,22 @@ Ab jetzt könnt ihr unser Album<!--more--> auf BANDCAMP digital und physisch erw
 
 DANKE an die Crew, die unsere Songs zu denen geformt haben, die sie jetzt sind! ❤️ 
 
-Produziert von: Domi Back
-Design: Mareta Langguth-Reinzuch
-Gitarre, Harp & Vocals: René Huber
-Geige, Mandoline, Ukulele & Vocals: Anka Slavik
-Drums: Paul Ettl
-Bass & Vocals: Hannes Stegmeier
-E-Gitarre: Eric Flach
-Mix: Domi Back & Flo Kenner
-Master: Victor Gaspar
+Produziert von: Domi Back  
+Design: Mareta Langguth-Reinzuch  
+Gitarre, Harp & Vocals: René Huber  
+Geige, Mandoline, Ukulele & Vocals: Anka Slavik  
+Drums: Paul Ettl  
+Bass & Vocals: Hannes Stegmeier  
+E-Gitarre: Eric Flach  
+Mix: Domi Back & Flo Kenner  
+Master: Victor Gaspar  
 
-Mit freundlicher Unterstützung von:
-Klosterbrauerei Weissenohe
-Fritz Kola
-Pop Rot Weiß
-Bezirk Mittelfranken
-Stadt Nürnberg
+Mit freundlicher Unterstützung von:  
+Klosterbrauerei Weissenohe  
+Fritz Kola  
+Pop Rot Weiß  
+Bezirk Mittelfranken  
+Stadt Nürnberg  
 
 [Hier findet ihr „Right where you are“ auf Bandcamp](https://nobutthefrog.bandcamp.com/music){:target="_blank"}
 
