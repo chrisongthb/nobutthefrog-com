@@ -21,9 +21,11 @@ on:
   #    of delay, schedule your workflow to run at a different time of the hour.
   #  - This event will only trigger a workflow run if the workflow file is on the default branch branch.
   #  - Scheduled workflows will only run on the default branch.
-  #  - In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. 
+  #  - In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days.
+  #
+  # UTC does not have winter-/summer time
   schedule:
-    - cron: '47 8 * * *'
+    - cron: '47 9 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
