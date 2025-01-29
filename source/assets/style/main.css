@@ -17,11 +17,11 @@
 }
 @font-face {
   font-family: "NewEdge666";
-  src: url("../font/NewEdge666-LightRounded-2.otf") format("truetype");
+  src: url("../font/NewEdge666-LightRounded-2.otf") format("opentype");
 }
 @font-face {
   font-family: "NewEdge666 Bold";
-  src: url("../font/NewEdge666-RegularRounded-2.otf") format("truetype");
+  src: url("../font/NewEdge666-RegularRounded-2.otf") format("opentype");
 }
 
 html {
@@ -35,6 +35,10 @@ body {
   font-style: normal;
   font-weight: 400;
   background-color: lightgoldenrodyellow;
+}
+
+h1, h2, h3, h4 {
+  font-family: "NewEdge666 Bold";
 }
 
 .cover {
@@ -98,8 +102,8 @@ body {
 .topnav {
   display: flex;
   width: 100%;
-  font-family: "Cantarell";
-  font-size: 1.3rem;
+  font-family: "NewEdge666 Bold";
+  font-size: 2.3rem;
   flex-direction: row;
   margin-block: 1rem;
   white-space: nowrap;
