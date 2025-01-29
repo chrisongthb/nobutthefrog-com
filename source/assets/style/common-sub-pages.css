@@ -26,7 +26,7 @@
 
 /* see also data-detect-style="on" property of .songkick-widget */
 #songkick-widget-container {
-  font-family: "Quicksand Bold", "Cantarell Bold"
+  font-family: "NewEdge666 Bold", "Quicksand Bold", "Cantarell Bold"
 }
 
 .topnav {
@@ -98,7 +98,7 @@
 }
 
 #main-content-button-text {
-  font-family: "Quicksand Bold";
+  font-family: "NewEdge666 Bold", "Quicksand Bold";
   color: black;
   font-size: 1em;
   user-select: none;
