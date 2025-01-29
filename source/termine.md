@@ -61,7 +61,7 @@ path_to_other_lang: 'en/dates/'
       data-social-share-icon="false"
       data-display-limit="all"
 
-      data-date-format="dddd, DD. MMM YYYY \⏰ HH:mm"
+      data-date-format="dd, DD. MMM YYYY \⏰ HH:mm"
       data-date-orientation="horizontal"
       data-date-border-color="#4A4A4A22"
       data-date-border-width="1px"
