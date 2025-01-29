@@ -15,6 +15,14 @@
   font-family: "Cantarell Bold";
   src: url("../font/Cantarell-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "NewEdge666";
+  src: url("../font/NewEdge666-LightRounded-2.otf") format("truetype");
+}
+@font-face {
+  font-family: "NewEdge666 Bold";
+  src: url("../font/NewEdge666-RegularRounded-2.otf") format("truetype");
+}
 
 html {
   scroll-behavior: smooth;
