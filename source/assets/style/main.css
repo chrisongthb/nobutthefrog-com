@@ -31,7 +31,7 @@ html {
 body {
   display: grid; /* default is display: block, which implies margins between all divs*/
   margin: 0; /* default is 8 (?!) */
-  font-family: "Quicksand", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "NewEdge666", "Quicksand", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   background-color: lightgoldenrodyellow;
@@ -98,7 +98,7 @@ body {
 .topnav {
   display: flex;
   width: 100%;
-  font-family: "Cantarell";
+  font-family: "NewEdge666", "Cantarell";
   font-size: 1.3rem;
   flex-direction: row;
   margin-block: 1rem;
@@ -227,7 +227,7 @@ body {
   transform: translate(-50%, 0%);
 
   /* style */
-  font-family: "Quicksand Bold";
+  font-family: "NewEdge666 Bold", "Quicksand Bold";
   color: black;
   background-color: #DCCD8990;
   padding: 0.3em;
@@ -302,7 +302,7 @@ body {
   z-index: 1;
 
   /* style */
-  font-family: "Quicksand Bold";
+  font-family: "NewEdge666 Bold", "Quicksand Bold";
   color: #2E2E2E;
   font-size: 1.1rem;
   user-select: none;
