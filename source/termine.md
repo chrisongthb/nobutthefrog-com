@@ -43,7 +43,7 @@ path_to_other_lang: 'en/dates/'
 
       data-events-to-display=""
       data-background-color="rgba(0,0,0,0)"
-      data-separator-color="rgba(221,221,221,1)"
+      data-separator-color="rgba(0,0,0,0)"
       data-text-color="rgba(66,66,66,1)"
       data-font="Quicksand"
       data-auto-style="false"
