@@ -14,7 +14,7 @@ path_to_other_lang: 'en/dates/'
           <p id="main-content-button-text">Folge uns auf Bandsintown & verpasse keine Termine <svg style="margin: -1px 6px 0px 0px; height: 18px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#000000" fill-rule="evenodd" d="M18.783 0H24v12h-5.217V0zm-6.261 5h5.217v7h-5.217V5zM6.26 5h5.217v7H6.261V5zM24 24H0V0h5.217v19h13.566v-1H6.26v-5H24v11z"></path></svg></p>
         </a>
       </div>
-      <p>Teile mit uns deinen Standort und wir kommen auch in deine Stadt! <a target="_blank" href="https://www.bandsintown.com/de/artist-subscribe/15570251-nobutthefrog??play-my-city=true&utm_campaign=play_my_city&utm_medium=web&utm_source=website">Frage uns!</a></p>
+      <p>Teile mit uns deinen Standort und wir kommen auch in deine Stadt! <a target="_blank" href="https://www.bandsintown.com/de/artist-subscribe/15570251-nobutthefrog?play-my-city=true&utm_campaign=play_my_city&utm_medium=web&utm_source=website">Frage uns!</a></p>
       <br>
 
       <style>
