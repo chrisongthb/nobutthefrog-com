@@ -12,7 +12,7 @@ blog_list_image: '17-01-04 10-36-32 6679.jpg_1000_70percent.webp'
 
 
 Es ist endlich so weit, wir freuen uns soo arg!! 
-Ab jetzt könnt ihr unser Album<!--more--> auf [BANDCAMP](https://nobutthefrog.bandcamp.com/music){:target="_blank"} digital und physisch erwerben! Das Album wurde in der Scheune meiner Großmutter aufgenommen in der großen Hitze des Sommers 2023.
+Ab jetzt könnt ihr unser Album auf [BANDCAMP](https://nobutthefrog.bandcamp.com/music){:target="_blank"} digital und physisch erwerben!<!--more--> Das Album wurde in der Scheune meiner Großmutter aufgenommen in der großen Hitze des Sommers 2023.
 
 DANKE an die Crew, die unsere Songs zu denen geformt haben, die sie jetzt sind! ❤️ 
 
