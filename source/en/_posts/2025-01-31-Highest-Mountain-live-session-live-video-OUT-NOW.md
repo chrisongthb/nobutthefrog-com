@@ -10,7 +10,14 @@ blog_list_image: 'IMG_7135.JPG_1000_70percent.webp'
 ---
 ![The image is an album cover featuring an orange line drawing of a mountain range against a backdrop of a real mountain range and a cloudy sky. The words "highest mountain" are written in large, orange letters across the bottom. At the top, in a smaller font, is the name "nobutthefrog". ](../../../assets/img/posts/IMG_7135.JPG_1000_70percent.webp "Featured Blog Post Foto")
 
-Please replace this text here. Everything before that<!--more--> will be visible in the blog post list as preview. Every words after are only visible by viewing the whole post.
 
-Here is how to put links: [This text gets displayed as inline-text (CLICK)](https://www.startnext.com/nbtf-right-where-you-are){:target="_blank"}
 
+Finally, finally, we can announce that our live video from the Musikzentrale Nuremberg will be released on Youtube today!<!--more--> Captured with the camera by Tim Händel, recorded with microphone by Markus Mai and mixed & mastered by Simon Froschauer.
+
+You can also finally listen to ‘Highest Mountain’ as a single on all streaming platforms, recorded in Anka's grandmother's barn on the edge of Franconian Switzerland in midsummer 2023.
+
+This song (already released in 2020 on Driftin', Bekassine Records) is a favourite among many fans
+fans; it goes down really well live, it's danceable, you can sing along to it, it's great fun on stage.
+fun to play on stage. That's why we recorded it live again with the band for the album ‘Right where you are’ to capture this energy. Hopefully we've managed that, please let us know if you were dancing in your room!
+
+[Watch „Highest Mountain“ on Youtube](https://youtu.be/mJsJ-YvLBSM?feature=shared){:target="_blank"}
