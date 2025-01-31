@@ -139,7 +139,7 @@ convert_to_webp() {
 #
 describe_featured_blog_post_photo_Linux() {
   while true; do
-    read -rp 'Describe the blog post image in German: '
+    read -rp 'Describe the blog post image in German - https://describe.pictures/de might help you: '
     if [ "$(wc -w <<< "${REPLY}")" -ge 3 ]; then
       break
     else
@@ -148,7 +148,7 @@ describe_featured_blog_post_photo_Linux() {
   done
   post_photo_description_de="${REPLY}"
   while true; do
-    read -rp 'Describe the blog post image in English: '
+    read -rp 'Describe the blog post image in English - https://describe.pictures/de might help you: '
     if [ "$(wc -w <<< "${REPLY}")" -ge 3 ]; then
       break
     else
