@@ -88,6 +88,7 @@
       {%- endif -%}
 
     </main>
+    {%- unless page.skip_embedding_support -%}
     <div class="content-flex-item" id="support-box">
       <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
         <a id="support-link" href="{{ site.baseurl }}/{% if page.lang == "de" %}support{% else %}en/support{% endif
@@ -100,6 +101,7 @@
         </a>
       </div>
     </div>
+    {%- endunless -%}
   </div>
   <div class="footer">
     <div id="footer-icon-flex-container">
