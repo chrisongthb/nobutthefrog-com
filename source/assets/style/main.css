@@ -217,7 +217,7 @@ h1 {
   height: 100%;
 }
 
-#support-box {
+#side-content-box {
   position: relative; /* see also #support-text position absolute */
   flex-basis: 30vw;
   text-align: center;
@@ -471,7 +471,7 @@ h1 {
     flex-direction: column;
   }
 
-  #support-box {
+  #side-content-box {
     text-align: center;
     padding: 0px;
     margin-inline: 5vw;

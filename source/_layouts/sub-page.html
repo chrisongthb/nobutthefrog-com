@@ -88,20 +88,13 @@
       {%- endif -%}
 
     </main>
-    {%- unless page.skip_embedding_support -%}
-    <div class="content-flex-item" id="support-box">
-      <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
-        <a id="support-link" href="{{ site.baseurl }}/{% if page.lang == "de" %}support{% else %}en/support{% endif
-          %}">
-          <p id="support-text">{% if page.lang == "de" %}Unterstütze unsere künstlerische Arbeit{% else %}Support us as
-            independent artists!{% endif %}</p>
-          <img alt="{% if page.lang == "de" %}Die Gesichter von Anka und René spiegeln sich im blauen Wasser{% else
-            %}The faces of Anka and René are reflecting in the blue water.{% endif %}" id="support-image"
-            src="{{ site.baseurl }}/assets/img/support_background.webp">
-        </a>
-      </div>
+    <div class="content-flex-item" id="side-content-box">
+      {%- if page.side_include -%}
+      {%- include {{ page.side_include }} -%}
+      {%- else -%}
+      {%- include support-box -%}
+      {%- endif -%}
     </div>
-    {%- endunless -%}
   </div>
   <div class="footer">
     <div id="footer-icon-flex-container">

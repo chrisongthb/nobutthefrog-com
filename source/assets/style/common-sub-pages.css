@@ -61,7 +61,7 @@
    scroll-and-then fixed
    no javascript and extra class names needed here :)
 */
-#support-box {
+#side-content-box {
   position: sticky;
   top: 7vh; /* has to match margin-block of #main-content-box in main.css*/
 }
