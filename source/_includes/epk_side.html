@@ -1,23 +1,38 @@
+<div> <!--- This is needed to force <a > to respect parent's boarders -->
 
-<div style="position: absolute;"> <!--- This is needed to force <a > to respect parent's boarders -->
+  <hr style="margin-block: 3rem;">
+  {% if page.lang == "de" %}
+  <h2>Probetrack</h2>
+  {% else %}
+  <h2>todo track</h2>
+  {% endif %}
+  <div>
+    <iframe
+      src="https://bandcamp.com/EmbeddedPlayer/album=795546446/size=large/bgcol=ffffff/linkcol=0f91ff/tracklist=false/artwork=small/track=2255929491/transparent=true/"
+      seamles style="border: 0; width: 80%; height: 120px;">
+    </iframe>
+  </div>
 
-<h2>Right where you are</h2>
+  <h3>Downloads</h3>
+  <a target="_blank" href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">{% if page.lang == "de" %}Pressematerial und Techrider{% else %}todo Press und Techrider{% endif %}</a>
 
-<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=795546446/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://nobutthefrog.bandcamp.com/album/right-where-you-are">Right where you are von Nobutthefrog</a></iframe>
 
-<hr style="margin-block: 3rem;">
+  {% if page.lang == "de" %}
+  <h2>Kontakt</h2>
+  {% else %}
+  <h2>Contact</h2>
+  {% endif %}
 
-<iframe style="border: 0; width: 100%; height: 20vh;" src="https://www.youtube.com/embed/LMEW3o4kpU8?si=GWWPkDR66gFI0DAS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p>Annkathrin Slavik & René Huber<br />
+    Musik Slavik &amp; Huber GbR<br /><br />
+    Kirchr&ouml;ttenbach C 20<br />
+    D-91220 Schnaittach</p>
 
-<h3>Mail und Phone</h3>
+  <p>
+    Email (allgemein): contact@nobutthefrog.com <br>
+    Email (booking): booking@nobutthefrog.com<br>
+    Tel.: +49 17657734896
+  </p>
+  <hr style="margin-block: 3rem;">
 
-<p>
-  contact@nobutthefrog.com <br>
-  booking@nobutthefrog.com<br>
-  Tel.: +49 1601643986
-</p>
-
-<hr style="margin-block: 3rem;">
-
-<a target="_blank" href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">Download Pressematerial und Techrider</a>
 </div>

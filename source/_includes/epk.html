@@ -1,72 +1,242 @@
+<style>
+  #header_picture {
+    box-shadow: 0px 0px 1em 0.1em #999999;
+    /*
+      Overwrite width from
+      assets/style/common-sub-pages.css
+    */
+    width: 50rem !important;
+    margin-block: 2rem;
+  }
+
+  #main-content-box {
+    /*
+      Overwrite text-align from
+      assets/style/common-sub-pages.css
+    */
+    text-align: center !important;
+    /* max-width: 32rem; alles in Boxen packen, max width auf X */
+
+  }
+
+
+  .quote-container {
+    position: relative;
+    text-align: right;
+    /* matches only cite, because p is covered by another rule */
+
+  }
+
+  blockquote {
+    margin: 0;
+    padding: .5rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 2rem 3.5rem;
+    box-shadow: inset #33333311 0px 0px 1em 0.1em;
+  }
+
+  blockquote:before {
+    position: absolute;
+    left: 1rem;
+    color: #eb5008;
+    font-size: 6rem;
+    content: "\201C";
+    font-size: 4rem;
+  }
+
+  cite {
+    position: relative;
+    top: -2rem;
+    right: 1rem;
+  }
 
 
 
-<h2>Indie Songwriter Duo aus Nürnberg</h3>
-<p>Spielen sie zu zweit, lässt das Zusammenspiel von Gitarre und der ungewöhnlich klingenden Geige das Publikum vor Freude jauchzen und jubeln und der bittersüße zweistimmige Gesang rührt die Menschen immer wieder zu Tränen.</p>
-<p>Mit ihrer Band bringen sie eine mitreißende Show auf die Bühne, die leichtfüßig über Genregrenzen springt und sich in keine Schublade stecken lässt.</p>
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-<img src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
+  #gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
+  #grid-container {
+    columns: 3 10rem;
+    column-gap: 1.5rem;
+    width: 80%;
 
-<h2>Pressestimmen</h3>
-<p>„Eine Folkband, die bis jetzt Geheimtippstatus hatte und wir gehen schwer davon aus, dass sich das sehr bald ändern wird: Nobutthefrog heißt sie und hat jetzt ihr 2. Album veröffentlicht.“</p>
-<p>Bayern 2 (Heimatsound-Tipp)</p>
+    div {
+      margin-block: 1.0rem;
+      display: inline-block;
+      transition: all .25s ease-in-out;
 
-<p>„Nobutthefrog feiern das Leben in all seinen Facetten, mit allen Höhen und Tiefen. Mal zu tanzbaren Rhythmen, dann wieder mit andächtigen, intimen Klängen liefert dieses Duo hier durchweg herzliche Musik für das Leben. Das klingt mal übersprudelnd positiv, dann wieder andächtig und intim, wie das Leben eben auch.“</p>
-<p>musikreviews.de</p>
+      img {
+        /*
+          Overwrite image width from main contaent box
+          assets/style/common-sub-pages.css
+        */
+        width: 100% !important;
+        box-shadow: 0px 0px 1em 0.1em #999999;
+      }
+    }
 
-<img src="{{ site.baseurl }}/assets/img/IMG_7666_h2500_70percent.webp">
+  }
+</style>
+<h2>Nobutthefrog</h2>
+{% if page.lang == "de" %}
+<h3>Indie Songwriter Duo aus Nürnberg</h3>
+{% else %}
+<h3>todo Nürnberg based Indie Songwriter Duo</h3>
+{% endif %}
 
-<img src="{{ site.baseurl }}/assets/img/band1_1000.webp">
-<img src="{{ site.baseurl }}/assets/img/band2_1000.webp">
-<img src="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h2500_70percent.webp">
-
-
-
-<h2>Konzerthighlights</h3>
-<h3>Clubs</h4>
-<ul>
-  <li>Nürnberg MUZ Club 2024</li>
-  <li>Bayreuth Glashaus 2024</li>
-  <li>Würzburg Kellerperle 2024</li>
-  <li>Fürth Kofferfabrik 2024</li>
-  <li>Erlangen E-Werk 2024</li>
-  <li>Alicante/Spanien Sala Euterpe 2024</li>
-  <li>Valencia/Spanien Fabrica de hielo 2024</li>
-  <li>Rodgau Maximal 2024</li>
-  <li>Bayreuth Neuneinhalb 2023</li>
-  <li>Lissabon/Portugal Braco de Prata 2023</li>
-  <li>Würzburg Theater Chambinzky 2023</li>
-  <li>Nürnberg Desi 2022</li>
-  <li>Sofar Sound Shows in: Lissabon, Porto, Cádiz, Madrid, </li>
-  <li>Sevilla, Valladolid, Nürnberg, München</li>
-</ul>
-
-
-<h3>Festivals</h4>
-<ul>
-  <li>Erfurt Wipfelrauschen Festival 2024</li>
-  <li>Ueckermünde Musik & Stille Festival 2024</li>
-  <li>Dessau Klink Festival 2024</li>
-  <li>Parksommer Chemnitz 2024</li>
-  <li>Bad Windsheim Weinturm Open Air 2023</li>
-  <li>Pegnitz Waldstock Festival 2023</li>
-  <li>Freising Bonfire Festival 2023</li>
-  <li>Bad Kissingen Rise Festival 2023</li>
-  <li>Würzburg Stramu Festival 2023</li>
-  <li>Nürnberg Brückenfestival 2022</li>
-</ul>
+<img id="header_picture" src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
 
 
-<h3>Kontakt</h3>
 
-<p>Annkathrin Slavik & René Huber
-  Musik Slavik &amp; Huber GbR<br ><br />
-  Kirchr&ouml;ttenbach C 20<br />
-  91220 Schnaittach</p>
+<div id="sub-page-flex-container">
+  <div class="sub-page-flex-item" style="max-width: 700px; margin: auto">
 
-<p>
-  Email (allgemein):  contact@nobutthefrog.com <br>
-  Email (booking):     booking@nobutthefrog.com<br>
-  Tel.: +49 1601643986
-</p>
+    <h2>About</h2>
+    {% if page.lang == "de" %}
+    <p>Spielen sie zu zweit, lässt das Zusammenspiel von Gitarre und der ungewöhnlich klingenden Geige das Publikum vor
+      Freude jauchzen und jubeln und der bittersüße zweistimmige Gesang rührt die Menschen immer wieder zu Tränen.</p>
+    <p>Mit ihrer Band bringen sie eine mitreißende Show auf die Bühne, die leichtfüßig über Genregrenzen springt und
+      sich in keine Schublade stecken lässt.</p>
+
+    {% else %}
+    <p>When they play together, the interplay between the guitar and the unusual sound of the violin makes the audience
+      cheer and shout with joy, and the bittersweet two-part vocals repeatedly move people to tears.</p>
+    <p>With their band, they put on a rousing show that effortlessly crosses genre boundaries and cannot be pigeonholed.
+    </p>
+
+    {% endif %}
+
+  </div>
+</div>
+<div id="sub-page-flex-container">
+  <div class="sub-page-flex-item" style="max-width: 700px; margin: auto">
+
+    <div class="quote-container">
+      <blockquote>
+        {% if page.lang == "de" %}
+        <p>Eine Folkband, die bis jetzt Geheimtippstatus hatte und wir gehen schwer davon aus, dass sich das sehr bald
+          ändern wird: Nobutthefrog heißt sie und hat jetzt ihr 2. Album veröffentlicht.</p>
+        {% else %}
+        <p>A folk band that has been an insider tip until now, and we strongly believe that this will change very soon:
+          They are called Nobutthefrog and have now released their second album.</p>
+        {% endif %}
+      </blockquote>
+      <cite>Bayern 2 (Heimatsound-Tipp)</cite>
+
+    </div>
+    <div class="quote-container">
+      <blockquote>
+        {% if page.lang == "de" %}
+        <p>Nobutthefrog feiern das Leben in all seinen Facetten, mit allen Höhen und Tiefen. Mal zu tanzbaren Rhythmen,
+          dann wieder mit andächtigen, intimen Klängen liefert dieses Duo hier durchweg herzliche Musik für das Leben.
+          Das
+          klingt mal übersprudelnd positiv, dann wieder andächtig und intim, wie das Leben eben auch.</p>
+        {% else %}
+        <p>Nobutthefrog celebrate life in all its facets, with all its ups and downs. Sometimes with danceable rhythms,
+          sometimes with reverent, intimate sounds, this duo delivers heartfelt music for life. Sometimes it sounds
+          exuberantly positive, sometimes reverent and intimate, just like life itself.</p>
+        {% endif %}
+      </blockquote>
+      <cite>musikreviews.de</cite>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div id="sub-page-flex-container">
+  <div class="sub-page-flex-item">
+    {% if page.lang == "de" %}
+    <h2>Promovideo</h2>
+    {% else %}
+    <h2>Promotional Video</h2>
+    {% endif %}
+    <iframe style="border: 0; width: 100%; aspect-ratio: 16 / 9; box-shadow: 0px 0px 1em 0.1em #999999;"
+      src="https://www.youtube.com/embed/LMEW3o4kpU8?si=GWWPkDR66gFI0DAS" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div id="sub-page-flex-container">
+  <div class="sub-page-flex-item">
+    {% if page.lang == "de" %}
+    <h2>Pressefotos - todo anklickbar</h2>
+    {% else %}
+    <h2>todo - add click - press photos</h2>
+    {% endif %}
+  </div>
+</div>
+<div id="gallery-container">
+  <div id="grid-container">
+    <div>
+      <img src="{{ site.baseurl }}/assets/img/IMG_7666_h2500_70percent.webp">
+    </div>
+    <div>
+      <img src="{{ site.baseurl }}/assets/img/band1_1000.webp">
+    </div>
+    <div>
+      <img src="{{ site.baseurl }}/assets/img/band2_1000.webp">
+    </div>
+    <div>
+      <img src="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h2500_70percent.webp">
+    </div>
+    <div>
+      <img src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
+    </div>
+  </div>
+</div>
+
+
+<div id="sub-page-flex-container">
+  <div class="sub-page-flex-item">
+
+    {% if page.lang == "de" %}
+    <h2>Konzerthighlights</h2>
+    {% else %}
+    <h2>Concert highlights</h2>
+    {% endif %}
+    <h3>Clubs</h3>
+      <ul>
+        <li>Nürnberg MUZ Club 2024</li>
+        <li>Bayreuth Glashaus 2024</li>
+        <li>Würzburg Kellerperle 2024</li>
+        <li>Fürth Kofferfabrik 2024</li>
+        <li>Erlangen E-Werk 2024</li>
+        <li>Alicante/Spanien Sala Euterpe 2024</li>
+        <li>Valencia/Spanien Fabrica de hielo 2024</li>
+        <li>Rodgau Maximal 2024</li>
+        <li>Bayreuth Neuneinhalb 2023</li>
+        <li>Lissabon/Portugal Braco de Prata 2023</li>
+        <li>Würzburg Theater Chambinzky 2023</li>
+        <li>Nürnberg Desi 2022</li>
+        <li>Sofar Sound Shows in: Lissabon, Porto, Cádiz, Madrid, </li>
+        <li>Sevilla, Valladolid, Nürnberg, München</li>
+      </ul>
+
+    <h3>Festivals</h3>
+      <ul>
+        <li>Erfurt Wipfelrauschen Festival 2024</li>
+        <li>Ueckermünde Musik & Stille Festival 2024</li>
+        <li>Dessau Klink Festival 2024</li>
+        <li>Parksommer Chemnitz 2024</li>
+        <li>Bad Windsheim Weinturm Open Air 2023</li>
+        <li>Pegnitz Waldstock Festival 2023</li>
+        <li>Freising Bonfire Festival 2023</li>
+        <li>Bad Kissingen Rise Festival 2023</li>
+        <li>Würzburg Stramu Festival 2023</li>
+        <li>Nürnberg Brückenfestival 2022</li>
+      </ul>
+
+  </div>
+</div>
