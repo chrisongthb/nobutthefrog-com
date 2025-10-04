@@ -1,6 +1,6 @@
 ---
 layout: sub-page
-title: 'press kit - todo EN'
+title: 'press kit'
 hide_title_on_page: true
 lang: de
 path_to_other_lang: 'en/epk/'
