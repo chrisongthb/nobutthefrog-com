@@ -160,14 +160,14 @@
   max-width: 100%;
 }
 
-/* only for support pages */
-#support-flex-container {
+/* only for some sub-pages */
+#sub-page-flex-container {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.support-flex-item {
+.sub-page-flex-item {
   width: 100%;
   padding-top: 2em;
   padding-inline: 1em;
@@ -179,11 +179,11 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #support-flex-container {
+  #sub-page-flex-container {
     flex-direction: column;
   }
 
-  .support-flex-item {
+  .sub-page-flex-item {
     padding-top: initial;
     padding-inline: initial;
   }
