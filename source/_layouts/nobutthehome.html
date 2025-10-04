@@ -140,8 +140,7 @@
         page.lang == "de" %}Impressum{% else %}Terms of Service{% endif %}</a>
       <a href="{{ site.baseurl }}/{% if page.lang == "de" %}datenschutz{% else %}en/privacy{% endif %}">{% if page.lang
         == "de" %}Datenschutz{% else %}Privacy Policy{% endif %}</a>
-      <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd" target="_blank">{% if page.lang
-        == "de" %}Pressemappe (EPK){% else %}Presskit (EPK){% endif %}</a>
+      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}epk{% else %}en/epk{% endif %}">{% if page.lang == "de" %}Pressemappe (EPK){% else %}Presskit (EPK){% endif %}</a>
     </div>
     <div id="footer-copyright-flex-container">
       <span>© {{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/">nobutthefrog</a></span>
