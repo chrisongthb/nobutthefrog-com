@@ -57,6 +57,61 @@
     padding: 0;
   }
 
+  #epk_video {
+    border: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  #epk_video_container_image {
+    /*
+      Overwrite text-align from
+      assets/style/common-sub-pages.css
+    */
+    width: 100% !important;
+    height: auto;
+
+  }
+
+  #epk_video_container {
+    position: relative;
+    box-shadow: 0px 0px 1em 0.1em #999999;
+    border-radius: 0.3rem;
+    background-color: black;
+  }
+
+  #epk_showVideoText:hover {
+    box-shadow: 0px 0px 1em 10px #566313;
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+  }
+
+
+  #epk_showVideoText {
+    position: absolute;
+    /* see also parent div: (relative) */
+
+    /* style */
+    transition: 200ms;
+    text-align: center !important;
+    /* Overwrite text-align from assets/style/common-sub-pages.css */
+    font-family: "Quicksand Bold";
+    color: #2E2E2E;
+    font-size: 1.1rem;
+    user-select: none;
+    cursor: pointer;
+
+    border-radius: 0.3rem;
+    background-color: #DCCD8990;
+    /* padding-block: 0.5em;
+    padding-inline: 1.5em; */
+
+    padding-top: 4rem;
+    width: 100%;
+    height: calc(100% - 4rem);
+  }
+
   #gallery-container {
     display: flex;
     justify-content: center;
@@ -64,7 +119,7 @@
     flex-direction: column;
   }
 
-  #grid-container {
+  #gallery-container-grid {
     columns: 3 10rem;
     column-gap: 1.5rem;
     width: 80%;
@@ -75,17 +130,117 @@
       transition: all .25s ease-in-out;
 
       img {
-        /*
-          Overwrite image width from main contaent box
-          assets/style/common-sub-pages.css
-        */
-        width: 100% !important;
+        width: 100%;
         box-shadow: 0px 0px 1em 0.1em #999999;
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+
+      img:hover {
+        transform: scale(2);
+
       }
     }
 
   }
+
+
+  #gallery-fullscreen {
+    img {
+      position: fixed;
+
+      top: 50vh;
+      padding-block: 90vh;
+      height: auto;
+
+      padding-inline: 10%;
+      left: 50%;
+      backdrop-filter: blur(0.9em);
+      -webkit-backdrop-filter: blur(0.9em);
+      width: 80%;
+      box-shadow: inset #000000 0px 0px 1em 0.1em;
+
+      z-index: 2;
+      max-width: 90%;
+      max-height: 90vh;
+      object-fit: scale-down;
+
+      transform: translate(-50%, -50%);
+    }
+  }
 </style>
+<script>
+  // The iframe API will call this function, when the download of the iframe JS code succeeded
+  // see also loadYoutubeVideo beneath
+  var player;
+  function onYouTubeIframeAPIReady() {
+    // https://developers.google.com/youtube/iframe_api_reference?hl=de#Loading_a_Video_Player
+    player = new YT.Player('epk_video_container', {
+      videoId: 'LMEW3o4kpU8',
+      width: '100%',
+      height: '100%',
+      events: {
+        'onReady': onPlayerReady,
+      }
+    }
+    );
+  }
+
+  // The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  //
+  // onload
+  // this overwrite onload function from common-sub-pages.js
+  //
+  window.onload = function () {
+
+    // Menu Button click
+    function toggle_show_menu_items() {
+      document.getElementById("myTopnav").classList.toggle("showitems");
+      document.getElementById("menu-icon-bars-container").classList.toggle("showitems");
+    }
+    document.getElementById("menu-icon").addEventListener('click', toggle_show_menu_items);
+
+    // Load youtube iframeAPI
+    function loadYoutubeVideo() {
+      const script = document.createElement('script')
+      script.src = 'https://www.youtube.com/iframe_api'
+      document.head.append(script)
+      console.log('hier');
+    }
+    document.getElementById("epk_showVideoText").addEventListener('click', loadYoutubeVideo);
+    document.getElementById("epk_video_container_image").addEventListener('click', loadYoutubeVideo);
+    document.getElementById("epk_video_container").addEventListener('click', loadYoutubeVideo);
+
+
+    // Gallery
+    var gallery_pics = []
+    fullscreen_div = document.getElementById("gallery-fullscreen")
+    document.getElementById("gallery-container-grid").childNodes.forEach((element) => {
+      if (element.childNodes[1] && element.childNodes[1].tagName == 'IMG') {
+        console.log(element.childNodes[1])
+        element.childNodes[1].addEventListener('click', show_pic_fullscreen);
+        gallery_pics.push(element.childNodes[1])
+      }
+    });
+    function hide_pic_fullscreen() {
+      while (fullscreen_div.firstChild) {
+        fullscreen_div.removeChild(fullscreen_div.firstChild);
+      }
+    }
+    function show_pic_fullscreen() {
+      fullscreen_div.appendChild(this.cloneNode());
+      fullscreen_div.childNodes.forEach((element) => {
+        element.addEventListener('click', hide_pic_fullscreen);
+      });
+    }
+  }
+
+
+</script>
 <h2>Nobutthefrog</h2>
 {% if page.lang == "de" %}
 <h3>Indie Songwriter Duo aus Nürnberg</h3>
@@ -161,24 +316,34 @@
     {% else %}
     <h2>Promotional Video</h2>
     {% endif %}
-    <iframe style="border: 0; width: 100%; aspect-ratio: 16 / 9; box-shadow: 0px 0px 1em 0.1em #999999;"
-      src="https://www.youtube.com/embed/LMEW3o4kpU8?si=GWWPkDR66gFI0DAS" title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="epk_video">
+      <div id="epk_video_container">
+        <!-- <div id="epk_showVideoText">&#xBB; Promovideo &ndash; live &#xAB;<br>&mdash;<br><span -->
+        <div id="epk_showVideoText">von <span class="socicon-youtube"></span> YouTube laden</div>
+        <!-- <p id="epk_showVideoText">&#xBB; Promovideo &ndash; live &#xAB;<br>&mdash;<br><span
+            class="socicon-youtube"></span> YouTube </p> -->
+        <img id="epk_video_container_image" src="{{ site.baseurl }}/assets/img/epk_video_click.webp">
+        <!-- <iframe id="epk_yt_video" style="border: 0; width: 100%; aspect-ratio: 16 / 9; box-shadow: 0px 0px 1em 0.1em #999999;"
+          src="https://www.youtube.com/embed/LMEW3o4kpU8?si=GWWPkDR66gFI0DAS" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+      </div>
+    </div>
   </div>
 </div>
 
 <div id="sub-page-flex-container">
   <div class="sub-page-flex-item">
     {% if page.lang == "de" %}
-    <h2>Pressefotos - todo anklickbar</h2>
+    <h2>Pressefotos - todo kein hover, wenn handy</h2>
     {% else %}
     <h2>todo - add click - press photos</h2>
     {% endif %}
   </div>
 </div>
+<div id="gallery-fullscreen"></div>
 <div id="gallery-container">
-  <div id="grid-container">
+  <div id="gallery-container-grid">
     <div>
       <img src="{{ site.baseurl }}/assets/img/IMG_7666_h2500_70percent.webp">
     </div>
@@ -207,36 +372,36 @@
     <h2>Concert highlights</h2>
     {% endif %}
     <h3>Clubs</h3>
-      <ul>
-        <li>Nürnberg MUZ Club 2024</li>
-        <li>Bayreuth Glashaus 2024</li>
-        <li>Würzburg Kellerperle 2024</li>
-        <li>Fürth Kofferfabrik 2024</li>
-        <li>Erlangen E-Werk 2024</li>
-        <li>Alicante/Spanien Sala Euterpe 2024</li>
-        <li>Valencia/Spanien Fabrica de hielo 2024</li>
-        <li>Rodgau Maximal 2024</li>
-        <li>Bayreuth Neuneinhalb 2023</li>
-        <li>Lissabon/Portugal Braco de Prata 2023</li>
-        <li>Würzburg Theater Chambinzky 2023</li>
-        <li>Nürnberg Desi 2022</li>
-        <li>Sofar Sound Shows in: Lissabon, Porto, Cádiz, Madrid, </li>
-        <li>Sevilla, Valladolid, Nürnberg, München</li>
-      </ul>
+    <ul>
+      <li>Nürnberg MUZ Club 2024</li>
+      <li>Bayreuth Glashaus 2024</li>
+      <li>Würzburg Kellerperle 2024</li>
+      <li>Fürth Kofferfabrik 2024</li>
+      <li>Erlangen E-Werk 2024</li>
+      <li>Alicante/Spanien Sala Euterpe 2024</li>
+      <li>Valencia/Spanien Fabrica de hielo 2024</li>
+      <li>Rodgau Maximal 2024</li>
+      <li>Bayreuth Neuneinhalb 2023</li>
+      <li>Lissabon/Portugal Braco de Prata 2023</li>
+      <li>Würzburg Theater Chambinzky 2023</li>
+      <li>Nürnberg Desi 2022</li>
+      <li>Sofar Sound Shows in: Lissabon, Porto, Cádiz, Madrid, </li>
+      <li>Sevilla, Valladolid, Nürnberg, München</li>
+    </ul>
 
     <h3>Festivals</h3>
-      <ul>
-        <li>Erfurt Wipfelrauschen Festival 2024</li>
-        <li>Ueckermünde Musik & Stille Festival 2024</li>
-        <li>Dessau Klink Festival 2024</li>
-        <li>Parksommer Chemnitz 2024</li>
-        <li>Bad Windsheim Weinturm Open Air 2023</li>
-        <li>Pegnitz Waldstock Festival 2023</li>
-        <li>Freising Bonfire Festival 2023</li>
-        <li>Bad Kissingen Rise Festival 2023</li>
-        <li>Würzburg Stramu Festival 2023</li>
-        <li>Nürnberg Brückenfestival 2022</li>
-      </ul>
+    <ul>
+      <li>Erfurt Wipfelrauschen Festival 2024</li>
+      <li>Ueckermünde Musik & Stille Festival 2024</li>
+      <li>Dessau Klink Festival 2024</li>
+      <li>Parksommer Chemnitz 2024</li>
+      <li>Bad Windsheim Weinturm Open Air 2023</li>
+      <li>Pegnitz Waldstock Festival 2023</li>
+      <li>Freising Bonfire Festival 2023</li>
+      <li>Bad Kissingen Rise Festival 2023</li>
+      <li>Würzburg Stramu Festival 2023</li>
+      <li>Nürnberg Brückenfestival 2022</li>
+    </ul>
 
   </div>
 </div>
