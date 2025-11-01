@@ -1,3 +1,8 @@
+<!--
+ TODO: image file sizes depending on media
+ TODO: pictures from https://drive.google.com/drive/folders/12g80zI37GBkMByVeMjVSDjDMzaWbXcli
+ TODO: youtube js load after click
+-->
 <style>
   #header_picture {
     box-shadow: 0px 0px 1em 0.1em #999999;
@@ -162,7 +167,24 @@
     }
   }
 
-  @media screen and (min-width: 500px) {
+  #press-downloads-button {
+    font-family: "Quicksand Bold";
+    font-size: 1.1em;
+    color: black;
+    background-color: #DCCD8990;
+    padding-block: 0.5em;
+    padding-inline: 2em;
+    user-select: none;
+    border-radius: 0.3rem;
+    transition: all 0.2s ease-out;
+    margin-block: 2rem;
+  }
+
+  #press-downloads-button:hover {
+    box-shadow: 0px 0px 1em 0.1em #566313;
+  }
+
+  @media screen and (min-width: 1200px) {
     #gallery-container-grid {
       div {
         img:hover {
@@ -212,7 +234,6 @@
       const script = document.createElement('script')
       script.src = 'https://www.youtube.com/iframe_api'
       document.head.append(script)
-      console.log('hier');
     }
     document.getElementById("epk_showVideoText").addEventListener('click', loadYoutubeVideo);
     document.getElementById("epk_video_container_image").addEventListener('click', loadYoutubeVideo);
@@ -224,7 +245,6 @@
     fullscreen_div = document.getElementById("gallery-fullscreen")
     document.getElementById("gallery-container-grid").childNodes.forEach((element) => {
       if (element.childNodes[1] && element.childNodes[1].tagName == 'IMG') {
-        console.log(element.childNodes[1])
         element.childNodes[1].addEventListener('click', show_pic_fullscreen);
         gallery_pics.push(element.childNodes[1])
       }
@@ -248,12 +268,21 @@
 {% if page.lang == "de" %}
 <h3>Indie Songwriter Duo aus Nürnberg</h3>
 {% else %}
-<h3>todo Nürnberg based Indie Songwriter Duo</h3>
+<h3>German Indie Songwriter Duo</h3>
 {% endif %}
 
-<img id="header_picture" src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
-
-
+  <picture>
+    <!-- see also rel="preload" in header and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
+    <source media="(max-width: 500px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp">
+    <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp">
+    <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp">
+    <source media="(min-width: 3001px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
+    <img alt="{% if page.lang == "de" %}Anka und René laufen am Strand und spielen auf der Geige und auf der Gitarre.
+      Die Sonne scheint und im Hintergrund brechen weiße Wellen.{% else %}Anka and René are walking on the beach
+      playing violin and guitar. The sun is shining and white waves are breaking in the background.{% endif %}"
+      src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp"
+      id="header_picture">
+  </picture>
 
 <div id="sub-page-flex-container">
   <div class="sub-page-flex-item" style="max-width: 700px; margin: auto">
@@ -338,9 +367,9 @@
 <div id="sub-page-flex-container">
   <div class="sub-page-flex-item">
     {% if page.lang == "de" %}
-    <h2>Pressefotos - todo kein hover, wenn handy</h2>
+    <h2>Pressefotos</h2>
     {% else %}
-    <h2>todo - add click - press photos</h2>
+    <h2>Press Photos</h2>
     {% endif %}
   </div>
 </div>
@@ -357,7 +386,7 @@
       <img src="{{ site.baseurl }}/assets/img/band2_1000.webp">
     </div>
     <div>
-      <img src="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h2500_70percent.webp">
+      <img src="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h1500_75percent.webp">
     </div>
     <div>
       <img src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">

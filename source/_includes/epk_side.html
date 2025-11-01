@@ -1,19 +1,17 @@
 <div> <!--- This is needed to force <a > to respect parent's boarders -->
 
   {% if page.lang == "de" %}
-  <h2>ToDo - Layout bei kleinnen Bildschirmen Probetrack</h2>
+  <h2>Höre &#xBB;Right Where You Are&#xAB;</h2>
   {% else %}
-  <h2>todo track</h2>
+  <h2>Listen to &#xBB;Right Where You Are&#xAB;</h2>
   {% endif %}
   <div>
-    <iframe
-      src="https://bandcamp.com/EmbeddedPlayer/album=795546446/size=large/bgcol=ffffff/linkcol=0f91ff/tracklist=false/artwork=small/track=2255929491/transparent=true/"
-      seamles style="border: 0; width: 80%; height: 120px;">
-    </iframe>
+    <iframe style="border: 0; width: 90%; aspect-ratio: 1/1; border-radius: 0.3rem;" src="https://bandcamp.com/EmbeddedPlayer/album=795546446/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://nobutthefrog.bandcamp.com/album/right-where-you-are">Right where you are von Nobutthefrog</a></iframe>
   </div>
 
-  <h3>ToDo - Downloads als Button</h3>
-  <a target="_blank" href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">{% if page.lang == "de" %}Pressematerial und Techrider{% else %}todo Press und Techrider{% endif %}</a>
+  <a target="_blank" style="text-decoration: none;" href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">
+    <p style="text-align: center;" id="press-downloads-button">{% if page.lang == "de" %}Download Pressematerial &amp; Techrider{% else %}Download press material &amp; techrider{% endif %}</p>
+  </a>
 
 
   {% if page.lang == "de" %}
