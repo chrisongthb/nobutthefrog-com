@@ -2,6 +2,8 @@
  TODO: image file sizes depending on media
  TODO: pictures from https://drive.google.com/drive/folders/12g80zI37GBkMByVeMjVSDjDMzaWbXcli
  TODO: youtube js load after click
+ TODO: preload checken
+ TODO: alt text for pictures
 -->
 <style>
   #header_picture {
@@ -244,10 +246,12 @@
     var gallery_pics = []
     fullscreen_div = document.getElementById("gallery-fullscreen")
     document.getElementById("gallery-container-grid").childNodes.forEach((element) => {
-      if (element.childNodes[1] && element.childNodes[1].tagName == 'IMG') {
-        element.childNodes[1].addEventListener('click', show_pic_fullscreen);
-        gallery_pics.push(element.childNodes[1])
-      }
+      element.childNodes.forEach((item) => {
+        if (item.tagName == 'PICTURE') {
+          item.addEventListener('click', show_pic_fullscreen);
+          gallery_pics.push(item)
+        }
+      });
     });
     function hide_pic_fullscreen() {
       while (fullscreen_div.firstChild) {
@@ -255,7 +259,8 @@
       }
     }
     function show_pic_fullscreen() {
-      fullscreen_div.appendChild(this.cloneNode());
+      // https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode
+      fullscreen_div.appendChild(this.cloneNode(true));
       fullscreen_div.childNodes.forEach((element) => {
         element.addEventListener('click', hide_pic_fullscreen);
       });
@@ -275,12 +280,11 @@
     <!-- see also rel="preload" in header and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
     <source media="(max-width: 500px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp">
     <source media="(max-width: 2000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp">
-    <source media="(max-width: 3000px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp">
-    <source media="(min-width: 3001px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
+    <source media="(min-width: 2001px)" srcset="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp">
     <img alt="{% if page.lang == "de" %}Anka und René laufen am Strand und spielen auf der Geige und auf der Gitarre.
       Die Sonne scheint und im Hintergrund brechen weiße Wellen.{% else %}Anka and René are walking on the beach
       playing violin and guitar. The sun is shining and white waves are breaking in the background.{% endif %}"
-      src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp"
+      src="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp"
       id="header_picture">
   </picture>
 
@@ -377,19 +381,76 @@
 <div id="gallery-container">
   <div id="gallery-container-grid">
     <div>
-      <img src="{{ site.baseurl }}/assets/img/IMG_7666_h2500_70percent.webp">
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_1_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_1_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_1_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_1_h2500_70percent.webp">
+      </picture>
     </div>
     <div>
-      <img src="{{ site.baseurl }}/assets/img/Credits_Ludivine_Pellisier_h1500_75percent.webp">
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/Credits_Katharina_Steca_h2500_70percent.webp">
+      </picture>
     </div>
     <div>
-      <img src="{{ site.baseurl }}/assets/img/IMG_7025_h1500_75percent.webp">
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/Credits_Carla_Losse_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/Credits_Carla_Losse_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/Credits_Carla_Losse_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/Credits_Carla_Losse_h2500_70percent.webp">
+      </picture>
     </div>
     <div>
-      <img src="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h1500_75percent.webp">
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/Credits_Ludivine_Pellisier_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/Credits_Ludivine_Pellisier_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/Credits_Ludivine_Pellisier_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/Credits_Ludivine_Pellisier_h2500_70percent.webp">
+      </picture>
     </div>
     <div>
-      <img src="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp">
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/IMG_7666_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/IMG_7666_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/IMG_7666_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/IMG_7666_h2500_70percent.webp">
+      </picture>
+    </div>
+    <div>
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/IMG_7025_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/IMG_7025_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/IMG_7025_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/IMG_7025_h2500_70percent.webp">
+      </picture>
+    </div>
+    <div>
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/Nobutthefrog_November_24_076_h2500_70percent.webp">
+      </picture>
+    </div>
+    <div>
+      <!-- https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML#providing_different_sources_for_images_and_videos -->
+      <picture>
+        <source media="(max-height: 900px)" srcset="{{ site.baseurl }}/assets/img/Credits_Blick_ins_Freie_h1000_75percent.webp">
+        <source media="(max-height: 1200px)" srcset="{{ site.baseurl }}/assets/img/Credits_Blick_ins_Freie_h1500_75percent.webp">
+        <source media="(min-height: 1201px)" srcset="{{ site.baseurl }}/assets/img/Credits_Blick_ins_Freie_h2500_70percent.webp">
+        <img src="{{ site.baseurl }}/assets/img/Credits_Blick_ins_Freie_h2500_70percent.webp">
+      </picture>
     </div>
   </div>
 </div>
