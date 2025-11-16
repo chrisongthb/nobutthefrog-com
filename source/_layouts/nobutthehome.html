@@ -11,13 +11,13 @@
   <script src="{{ site.baseurl }}/assets/script/home.js"></script>
   {%- include metadata.html -%}
   <!-- see also picture tag below and https://web.dev/articles/preload-responsive-images?hl=de#picture -->
-  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" as="image"
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_1500_50percent.webp" as="image" type="image/webp"
     media="(max-width: 500px)">
-  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" as="image"
-    media="(max-width: 2000px)">
-  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" as="image"
-    media="(max-width: 3000px)">
-  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" as="image"
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_2000_90percent.webp" as="image" type="image/webp"
+    media="(min-width: 501px) and (max-width: 2000px)">
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_3000_50percent.webp" as="image" type="image/webp"
+    media="(min-width: 2001px) and (max-width: 3000px)">
+  <link rel="preload" href="{{ site.baseurl }}/assets/img/IMG_7979_5000_50percent.webp" as="image" type="image/webp"
     media="(min-width: 3001px)">
 </head>
 
