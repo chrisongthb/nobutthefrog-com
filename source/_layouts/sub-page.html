@@ -42,7 +42,7 @@
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
     <a href="{{ site.baseurl }}/{% if page.lang == "en" %}en/{% endif %}">Home</a>
-    {% if page.not_in_menu %}<a href="{{ site.baseurl }}/{{ page.url }}" class="active">{{ page.title }}</a>{% endif %}
+    {% if page.not_in_menu %}<a href="{{ site.baseurl }}{{ page.url }}" class="active">{{ page.title }}</a>{% endif %}
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{% else %}en/blog{% endif %}"{% if page.url
       contains "blog" or page.url contains "en/blog" or page.url contains "/posts/" %} class="active" {% endif %}>{% if
       page.lang == "de" %}Blog{% else %}Blog{% endif %}</a>
