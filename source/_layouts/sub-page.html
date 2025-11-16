@@ -42,7 +42,7 @@
   <!-- menu -->
   <div class="topnav" id="myTopnav"> <!-- id gets used by javascript -->
     <a href="{{ site.baseurl }}/{% if page.lang == "en" %}en/{% endif %}">Home</a>
-    {% if page.not_in_menu %}<a href="{{ site.baseurl }}/{{ page.url }}" class="active">{{ page.title }}</a>{% endif %}
+    {% if page.not_in_menu %}<a href="{{ site.baseurl }}{{ page.url }}" class="active">{{ page.title }}</a>{% endif %}
     <a href="{{ site.baseurl }}/{% if page.lang == "de" %}blog{% else %}en/blog{% endif %}"{% if page.url
       contains "blog" or page.url contains "en/blog" or page.url contains "/posts/" %} class="active" {% endif %}>{% if
       page.lang == "de" %}Blog{% else %}Blog{% endif %}</a>
@@ -79,26 +79,21 @@
   <div id="content-flex-container">
     <main class="content-flex-item" id="main-content-box">
 
-      {%- if page.title -%}
+      {%- unless page.hide_title_on_page -%}
       <h1>{{ page.title }}</h1>
-      {%- endif -%}
+      {%- endunless -%}
       {{ page.content }}
       {%- if page.extra_include -%}
       {%- include {{ page.extra_include }} -%}
       {%- endif -%}
 
     </main>
-    <div class="content-flex-item" id="support-box">
-      <div id="support-box-button-container"> <!--- This is needed to force <a > to respect parent's boarders -->
-        <a id="support-link" href="{{ site.baseurl }}/{% if page.lang == "de" %}support{% else %}en/support{% endif
-          %}">
-          <p id="support-text">{% if page.lang == "de" %}Unterstütze unsere künstlerische Arbeit{% else %}Support us as
-            independent artists!{% endif %}</p>
-          <img alt="{% if page.lang == "de" %}Die Gesichter von Anka und René spiegeln sich im blauen Wasser{% else
-            %}The faces of Anka and René are reflecting in the blue water.{% endif %}" id="support-image"
-            src="{{ site.baseurl }}/assets/img/support_background.webp">
-        </a>
-      </div>
+    <div class="content-flex-item" id="side-content-box">
+      {%- if page.side_include -%}
+      {%- include {{ page.side_include }} -%}
+      {%- else -%}
+      {%- include support-box.html -%}
+      {%- endif -%}
     </div>
   </div>
   <div class="footer">
@@ -122,7 +117,7 @@
         page.lang == "de" %}Impressum{% else %}Terms of Service{% endif %}</a>
       <a href="{{ site.baseurl }}/{% if page.lang == "de" %}datenschutz{% else %}en/privacy{% endif %}">{% if page.lang
         == "de" %}Datenschutz{% else %}Privacy Policy{% endif %}</a>
-      <a href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd" target="_blank">{% if page.lang
+      <a href="{{ site.baseurl }}/{% if page.lang == "de" %}epk{% else %}en/epk{% endif %}">{% if page.lang
         == "de" %}Pressemappe (EPK){% else %}Presskit (EPK){% endif %}</a>
     </div>
     <div id="footer-copyright-flex-container">

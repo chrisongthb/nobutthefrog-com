@@ -1,0 +1,36 @@
+<div>
+
+  {% if page.lang == "de" %}
+  <h2>Probetracks</h2>
+  <p>aus unserem aktuellen Album &#xBB;Right Where You Are&#xAB;</p>
+  {% else %}
+  <h2>Sample tracks</h2>
+  <p>from our current album &#xBB;Right Where You Are&#xAB;</p>
+  {% endif %}
+  <div>
+    <iframe style="border: 0; width: 90%; aspect-ratio: 1/1; border-radius: 0.3rem;" src="https://bandcamp.com/EmbeddedPlayer/album=795546446/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://nobutthefrog.bandcamp.com/album/right-where-you-are">Right where you are von Nobutthefrog</a></iframe>
+  </div>
+
+  <a target="_blank" style="text-decoration: none;" href="https://drive.google.com/drive/folders/1Ae4w9OJCkENE_rjaKnGnmdDLuKYHmyvd">
+    <p style="text-align: center;" id="press-downloads-button">{% if page.lang == "de" %}Download Pressematerial &amp; Techrider{% else %}Download press material &amp; techrider{% endif %}</p>
+  </a>
+
+
+  {% if page.lang == "de" %}
+  <h2>Kontakt</h2>
+  {% else %}
+  <h2>Contact</h2>
+  {% endif %}
+
+  <p>Annkathrin Slavik & René Huber<br />
+    Musik Slavik &amp; Huber GbR<br /><br />
+    Kirchr&ouml;ttenbach C 20<br />
+    D-91220 Schnaittach</p>
+
+  <p>
+    Email (allgemein): contact@nobutthefrog.com <br>
+    Email (booking): booking@nobutthefrog.com<br>
+    Tel.: +49 17657734896
+  </p>
+
+</div>

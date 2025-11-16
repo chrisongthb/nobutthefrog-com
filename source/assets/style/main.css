@@ -217,13 +217,13 @@ h1 {
   height: 100%;
 }
 
-#support-box {
+#side-content-box {
   position: relative; /* see also #support-text position absolute */
   flex-basis: 30vw;
   text-align: center;
   margin-right: 5vw;
   margin-top: 7vh;
-  max-height: 300px;
+  height: fit-content; /* respect children's height, bot don't use all the space to get position: sticky (scroll-magic) working */
 }
 
 #support-text {
@@ -471,14 +471,17 @@ h1 {
     flex-direction: column;
   }
 
-  #support-box {
+  #side-content-box {
     text-align: center;
     padding: 0px;
     margin-inline: 5vw;
     margin-top: 5vh;
     width: 90%;
-    height: 4rem;
     flex-basis: initial;
+  }
+
+  #support-box-button-container {
+    height: 4rem;
   }
 
   #support-text {
