@@ -105,7 +105,7 @@ jobs:
           pass: ${{ secrets.SFTP_PASS }}
           # lftp settings
           onlyNewer: true
-          settings: 'sftp:auto-confirm=yes; ftp:list-options=-a'
+          settings: 'sftp:auto-confirm=yes,ftp:list-options=-a'
           # Mirror command options
           localDir: '.'
           remoteDir: '/customers/9/b/4/nobutthefrog.com/httpd.www'
