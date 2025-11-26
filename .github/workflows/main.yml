@@ -65,9 +65,9 @@ jobs:
       - name: Build with Jekyll
         run: |
           cd "source"
-          tree -fa
+          ls -la .
           bundle exec jekyll build
-          tree -fa
+          ls -la . _site/
         env:
           JEKYLL_ENV: production
 
