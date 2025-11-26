@@ -88,8 +88,8 @@ jobs:
       - shell: bash
         run: |
           pwd
-          ls -l
-          tree -f
+          ls -la
+          tree -fa
       - name: view the secrets context
         shell: bash
         run: echo "$SECRETS_CONTEXT"
