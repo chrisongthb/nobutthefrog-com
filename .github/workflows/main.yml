@@ -63,7 +63,11 @@ jobs:
         # w/o --future, w/o --basepath
         # see also _config.yml (url)
       - name: Build with Jekyll
-        run: cd "source"; ls -l; bundle exec jekyll build
+        run: |
+          cd "source"
+          tree -fa
+          bundle exec jekyll build
+          tree -fa
         env:
           JEKYLL_ENV: production
 
