@@ -96,7 +96,7 @@ jobs:
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
       - name: Deploy files via SFTP
-        uses: pressidium/lftp-mirror-action@v1
+        uses: pressidium/lftp-mirror-action@4291d30ef2e9ce053a9b51b607e6d7081cfff1a9
         with:
           # SFTP credentials
           host: ${{ secrets.SFTP_HOST }}
