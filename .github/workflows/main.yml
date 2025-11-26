@@ -76,6 +76,7 @@ jobs:
         with:
           name: jekyll-production-site
           path: 'source/_site/'
+          include-hidden-files: true
 
   # Deployment job on production site
   # see also https://github.com/marketplace/actions/lftp-mirror-action
