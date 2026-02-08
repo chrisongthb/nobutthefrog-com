@@ -51,6 +51,7 @@ h1 {
 }
 
 .logo {
+  filter: invert(1);
   position: absolute;
   top: 5%;
   left: 5%;
@@ -396,6 +397,7 @@ h1 {
   }
 
   .logo {
+    filter: invert(0);
     position: static; /* reset to default */
     max-width: 60%;
     min-width: 60%;
